@@ -1,1 +1,8 @@
+_site
+serve
+.DS_Store
+.bundle
+*.swp
+Gemfile.lock
+.sass-cache
 .jekyll-cache
