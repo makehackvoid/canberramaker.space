@@ -1,3 +1,10 @@
+@import "config/_colour";
+
+@import "layout/_site_layout";
+@import "layout/_siteheader_layout";
+@import "components/_header";
+
+
 @font-face {
     font-family: Hacked;
     src: url("/assets/fonts/HACKED.ttf") format("truetype");
@@ -25,28 +32,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap');
 
-$mhvblue: #1C9AD6;
 
-
-$primary: #0892A5;
-$secondary: #153B50;
-$accent: #CC998D;
-
-$primary: #7192BE;
-$secondary: #153B50;
-$accent: #D66853;
-
-$bg-color: #FCF7F8;
-$fg-color: #2D3047;
-
-$banner-fg: $bg-color;
-$banner-bg: $primary;
 
 body {
-  background-color: $bg-color;
-  color: $fg-color;
+  // background-color: $bg-color;
+  // color: $fg-color;
   font-family: Roboto;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2 {
@@ -54,51 +48,26 @@ h1, h2 {
   font-weight: 400;
 }
 
-.banner {
-  background-color: $banner-bg;
-}
-
-.brand {
-  color: $banner-fg;
-
-  font-family: Oswald;
-  font-weight: 400;
-  font-size: 75px;
-
-  //text-shadow: 2px 0px red, -2px 0px blue, 4px 2px 4px rgba(6, 6, 6, .7);
-  text-shadow: 2px 0px red, -2px 0px blue;
-  text-shadow: 3px 0px $accent, -3px 0px $secondary;
-
-  .make {
-    font-weight: 500;
+.logo-container {
+  display: inline-block;
+  &:before {
+    border-radius: 50%;
+    height: 100%;
   }
-
-  .void {
-    font-family: Hacked;
-    font-size: 85px;
-  }
-}
-
-.subtitle {
-  color: $banner-fg;
-
-  font-family: Roboto;
-  font-weight: 300;
-  font-size: 40px;
-
-  text-shadow: 1px 1px 2px rgba(6, 6, 6, .7);
 }
 
 .logo-svg {
-  height: 10em;
+  height: 100%;
   width: auto;
 
+
   path {
-    fill: $banner-fg;
-    filter: drop-shadow(2px 2px 4px rgba(6, 6, 6, .7));
+    fill: black;
+    // fill: $banner-fg;
+    // filter: drop-shadow(2px 2px 4px rgba(6, 6, 6, .7));
   }
 }
 
 .selected {
-  background-color: $accent;
+  // background-color: $accent;
 }

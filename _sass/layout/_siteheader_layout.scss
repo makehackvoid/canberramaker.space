@@ -1,0 +1,22 @@
+header.siteheader .siteheader-layout {
+  display: flex;
+  height: 100%;
+
+  .logo-container {
+    margin-right: 2ch;
+  }
+
+  .brand {
+    font-size: calc( 110px - 40px);
+  }
+
+  .subtitle {
+    font-size: 30px;
+  }
+
+  .title-group {
+    margin-top: -4px;
+  }
+
+
+}
