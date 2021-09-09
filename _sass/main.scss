@@ -25,17 +25,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap');
 
-$bg-color: #ECEBE4;
+$mhvblue: #1C9AD6;
+
+
 $primary: #0892A5;
 $secondary: #153B50;
-$accent1: #0CA4A5;
-$accent2: #CC998D;
+$accent: #CC998D;
 
-$mhvblue: #1C9AD6;
+$primary: #7192BE;
+$secondary: #153B50;
+$accent: #D66853;
+
+$bg-color: #FCF7F8;
+$fg-color: #2D3047;
+
+$banner-fg: $bg-color;
+$banner-bg: $primary;
 
 body {
   background-color: $bg-color;
-  color: $secondary;
+  color: $fg-color;
   font-family: Roboto;
   font-weight: 400;
 }
@@ -45,11 +54,20 @@ h1, h2 {
   font-weight: 400;
 }
 
+.banner {
+  background-color: $banner-bg;
+}
+
 .brand {
-  color: $primary;
+  color: $banner-fg;
+
   font-family: Oswald;
   font-weight: 400;
   font-size: 75px;
+
+  //text-shadow: 2px 0px red, -2px 0px blue, 4px 2px 4px rgba(6, 6, 6, .7);
+  text-shadow: 2px 0px red, -2px 0px blue;
+  text-shadow: 3px 0px $accent, -3px 0px $secondary;
 
   .make {
     font-weight: 500;
@@ -62,18 +80,13 @@ h1, h2 {
 }
 
 .subtitle {
-  color: $primary;
+  color: $banner-fg;
+
   font-family: Roboto;
   font-weight: 300;
   font-size: 40px;
-}
 
-.banner {
-  background-color: white;
-}
-
-.selected {
-  background-color: $accent1;
+  text-shadow: 1px 1px 2px rgba(6, 6, 6, .7);
 }
 
 .logo-svg {
@@ -81,6 +94,11 @@ h1, h2 {
   width: auto;
 
   path {
-    fill: $primary;
+    fill: $banner-fg;
+    filter: drop-shadow(2px 2px 4px rgba(6, 6, 6, .7));
   }
+}
+
+.selected {
+  background-color: $accent;
 }
