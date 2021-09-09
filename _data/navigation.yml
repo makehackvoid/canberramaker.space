@@ -1,4 +1,8 @@
 - name: Home
   link: /
+- name: Tools
+  link: /tools.html
+- name: Conduct
+  link: /tools.html
 - name: About
   link: /about.html
