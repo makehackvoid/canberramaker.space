@@ -28,6 +28,12 @@ nav {
       color: $banner-fg-accent;
       text-decoration: none;
       font-size: 1.5em;
+
+      &:hover {
+        text-decoration: none;
+        color: $link;
+        border-bottom: 2px dashed $link;
+      }
     }
 
     &.selected {
