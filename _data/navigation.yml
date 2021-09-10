@@ -1,8 +1,8 @@
 - name: Home
   link: /
+- name: Visit us
+  link: /visit_us.html
 - name: Tools
   link: /tools.html
 - name: Conduct
-  link: /tools.html
-- name: About
-  link: /about.html
+  link: /code_of_conduct.html

@@ -1,0 +1,39 @@
+body {
+  background-color: $bg-color;
+  color: $fg-color;
+  font-family: Roboto;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  font-family: Oswald;
+  font-weight: 400;
+}
+
+div.intro-photo {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  height: 200px;
+  background-image: url("/assets/images/mhv.jpg");
+  background-position: center;
+  border-radius: 1em;
+}
+
+blockquote.intro-quote {
+  font-size: 1.5em;
+  font-family: Oswald;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

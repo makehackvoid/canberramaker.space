@@ -1,33 +1,65 @@
 .banner-background {
-  // background-color: $banner-bg;
+  background-color: $banner-bg;
+}
+
+.navigation-background {
+  background-color: $banner-bg;
+}
+
+.navigation-container {
 }
 
 nav {
-  font-family: Inconsolata;
-  font-weight: bold;
-  a {
-    text-decoration: none;
-    font-size: 1.5em;
+  font-family: Oswald;
+  font-weight: 400;
+  font-size: 0.8em;
+  text-transform: uppercase;
+
+  display: table;
+  height: 100%;
+
+  span {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 2ch;
+    padding-right: 2ch;
+
+    a {
+      color: $banner-fg-accent;
+      text-decoration: none;
+      font-size: 1.5em;
+    }
+
+    &.selected {
+      a {
+        color: $banner-fg;
+        border-bottom: 2px solid $banner-fg;
+      }
+    }
   }
 }
 
 header.siteheader {
+  // text-shadow: 1px 1px 4px rgba(6, 6, 6, .4);
+  // text-shadow: 1px 1px 2px rgba(6, 6, 6, .4);
   .subtitle {
+    color: $banner-fg-accent;
+
     margin: 0;
 
-    font-family: Inconsolata;
+    font-family: Roboto;
     font-weight: 300;
 
     text-transform: lowercase;
-
-    // text-shadow: 1px 1px 2px rgba(6, 6, 6, .7);
   }
+
   .brand {
+    border-bottom: 2px solid $banner-fg-accent;
+
     margin: 0;
     line-height: 1;
 
-    color: black;
-    // color: $banner-fg;
+    color: $banner-fg;
 
     font-family: Oswald;
     font-weight: 400;
@@ -36,7 +68,7 @@ header.siteheader {
       font-size: 1;
     }
 
-    //text-shadow: 2px 0px red, -2px 0px blue, 4px 2px 4px rgba(6, 6, 6, .7);
+    // text-shadow: 2px 0px red, -2px 0px blue, 4px 2px 4px rgba(6, 6, 6, .7);
     // text-shadow: 2px 0px red, -2px 0px blue;
     // text-shadow: 3px 0px $accent, -3px 0px $secondary;
 
@@ -48,5 +80,23 @@ header.siteheader {
       font-family: Hacked;
       font-size: 1.16em;
     }
+  }
+}
+
+.logo-container {
+  display: inline-block;
+  &:before {
+    border-radius: 50%;
+    height: 100%;
+  }
+}
+
+.logo-svg {
+  height: 100%;
+  width: auto;
+
+  path {
+    fill: $banner-fg;
+    // filter: drop-shadow(4px 4px 2px rgba(6, 6, 6, .7));
   }
 }

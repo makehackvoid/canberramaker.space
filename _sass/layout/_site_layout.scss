@@ -5,18 +5,22 @@
                           [content-col] 960px
                           [gutter-right] 1fr;
 
-  grid-template-rows: [header-top] 1rem  
+  grid-template-rows: [header-top] 4rem
                     [header] 110px
-                    [interaction-box] 1rem
-                    [navigation-box] 2rem
+                    [interaction-box] 2rem
+                    [navigation-box] 4rem
                     [content] minmax(0, auto)
                     [footer] 2rem [end-row];
 
 
   .banner-background {
-    grid-area: header / gutter-left / interaction-box / end-col;
+    grid-area: header-top / gutter-left / navigation-box / end-col;
   }
-  
+
+  .navigation-background {
+    grid-area: navigation-box / gutter-left / content / end-col;
+  }
+
   header.siteheader {
     grid-area: header / content-col / header / gutter-right;
   }
@@ -33,7 +37,4 @@
   main p {
     width: 80ch;
   }
-
-
-
 }

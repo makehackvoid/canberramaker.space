@@ -1,9 +1,8 @@
 @import "config/_colour";
-
 @import "layout/_site_layout";
 @import "layout/_siteheader_layout";
 @import "components/_header";
-
+@import "components/_body_text";
 
 @font-face {
     font-family: Hacked;
@@ -31,43 +30,3 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap');
-
-
-
-body {
-  // background-color: $bg-color;
-  // color: $fg-color;
-  font-family: Roboto;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2 {
-  font-family: Oswald;
-  font-weight: 400;
-}
-
-.logo-container {
-  display: inline-block;
-  &:before {
-    border-radius: 50%;
-    height: 100%;
-  }
-}
-
-.logo-svg {
-  height: 100%;
-  width: auto;
-
-
-  path {
-    fill: black;
-    // fill: $banner-fg;
-    // filter: drop-shadow(2px 2px 4px rgba(6, 6, 6, .7));
-  }
-}
-
-.selected {
-  // background-color: $accent;
-}
