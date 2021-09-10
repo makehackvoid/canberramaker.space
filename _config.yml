@@ -3,3 +3,4 @@ title: "MakeHackVoid - Canberra Makerspace"
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-favicon
