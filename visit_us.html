@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Visit Us | Make Hack Void - Canberra Makerspace
+fullbleed: true
 ---
 <h1>Visit us</h1>
 
@@ -8,7 +9,7 @@ title: Visit Us | Make Hack Void - Canberra Makerspace
 We are located at 17 Tucana St, Giralang ACT 2617
 </p>
 
-<div id="map" style="height: 400px;"></div>
+<div id="map" style="height: 50vh;"></div>
 
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
@@ -21,4 +22,8 @@ We are located at 17 Tucana St, Giralang ACT 2617
   center: [149.09658626453248, -35.21662885760703], // starting position [lng, lat]
   zoom: 15 // starting zoom
   });
+
+  const marker1 = new mapboxgl.Marker()
+                    .setLngLat([149.09658626453248, -35.21662885760703])
+                    .addTo(map);
 </script>
