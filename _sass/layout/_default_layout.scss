@@ -1,0 +1,14 @@
+body.default-layout:not(.fullbleed) main {
+  .content-grid-container {
+    display: grid;
+    grid-template-columns:  [content-col] 80ch
+                            [content-gutter] 2ch
+                            [aside-col] 1fr;
+
+    grid-template-rows: [content] minmax(0, auto);
+  }
+ 
+  .content {
+    grid-area: content / content-col / content / content-gutter;
+  }
+}
