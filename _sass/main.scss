@@ -1,8 +1,11 @@
 @import "config/_colour";
 @import "layout/_site_layout";
 @import "layout/_siteheader_layout";
+@import "layout/_default_layout";
+
 @import "components/_header";
 @import "components/_body_text";
+@import "components/_default_layout";
 
 @font-face {
     font-family: Hacked;
