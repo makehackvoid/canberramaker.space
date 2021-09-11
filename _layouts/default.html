@@ -7,7 +7,7 @@
     {% seo %}
     {% favicon %}
   </head>
-  <body>
+  <body class="default-layout {% if page.fullbleed %}fullbleed{% endif %}">
     <div class="site-grid-container">
       <div class="banner-background"></div>
       <div class="navigation-background"></div>
@@ -28,8 +28,13 @@
         {% include navigation.html %}
       </div>
       <main>
-        <div class="content">
-        {{ content }}
+        {% if page.banner %}
+          <div class="banner-image" style="background-image: url({{ page.banner }}); height: {{ page.banner_height }};"></div>
+        {% endif %}
+        <div class="content-grid-container">
+          <div class="content">
+            {{ content }}
+          </div>
         </div>
       </main>
     </div>
