@@ -1,7 +1,12 @@
 ---
 layout: default
 title: Code of Conduct | MakeHackVoid - Canberra Makerspace
+aside:
+ - policy-inspiration:
+   title: <i class="fas fa-sticky-note"></i>note
+   content: This anti-harassment policy is based on the <a href='http://geekfeminism.wikia.com/wiki/Conference_anti-harassment'>example policy from the Geek Feminism wiki</a>, created by the Ada Initiative and other volunteers.
 ---
+
 Code of Conduct
 ===============
 
@@ -11,6 +16,3 @@ Harassment includes offensive verbal comments related to gender, gender identity
 
 If a person engages in harassing behaviour, MakeHackVoid members may take any action they deem appropriate, including warning the offender or expulsion from the space or event. If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member or committee member immediately.
 
-***
-
-This anti-harassment policy is based on the <a href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment">example policy from the Geek Feminism wiki</a>, created by the Ada Initiative and other volunteers.
