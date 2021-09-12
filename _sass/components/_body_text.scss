@@ -17,6 +17,9 @@ blockquote {
   font-family: Oswald;
   line-height: 1.15;
   font-weight: 300;
+  @media (max-width: 700px) {
+    margin: 1em 1ch;
+  }
 }
 
 a {

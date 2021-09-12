@@ -7,6 +7,9 @@ header.siteheader .siteheader-layout {
     @media (max-width: 700px) {
       flex: 0 0 calc( 60px + 2ch );
     }
+    @media (max-width: 400px) {
+      display: none;
+    }
     .logo-svg {
       height: 100%;
       width: 100%;
