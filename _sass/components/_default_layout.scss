@@ -2,4 +2,14 @@ body.default-layout main {
   .banner-image {
     background-position: center;
   }
+
+  .aside-container aside {
+    strong .fas, .fa {
+      padding-right: 5px;
+    }
+    p {
+      margin: 0.5em 0;
+      line-height: 1.15;
+    }
+  }
 }
