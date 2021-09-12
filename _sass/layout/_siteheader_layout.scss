@@ -3,7 +3,7 @@ header.siteheader .siteheader-layout {
   height: 100%;
 
   .logo-container {
-    margin-right: 2ch;
+    flex: 0 0 calc( 110px + 3ch );
   }
 
   .brand {
@@ -15,8 +15,6 @@ header.siteheader .siteheader-layout {
   }
 
   .title-group {
-    margin-top: -4px;
+    margin-top: -8px;
   }
-
-
 }
