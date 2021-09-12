@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="/assets/fonts/fontawesome/css/all.css" rel="stylesheet">
     {% seo %}
     {% favicon %}
   </head>
@@ -32,8 +33,16 @@
           <div class="banner-image" style="background-image: url({{ page.banner }}); height: {{ page.banner_height }};"></div>
         {% endif %}
         <div class="content-grid-container">
-          <div class="content">
+          <article class="content">
             {{ content }}
+          </article>
+          <div class="aside-container">
+            {% for aside in page.aside %}
+              <aside>
+                <strong>{{ aside.title }}</strong>
+                <p>{{ aside.content }}</p>
+              </aside>
+            {% endfor %}
           </div>
         </div>
       </main>
