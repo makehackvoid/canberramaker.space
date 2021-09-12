@@ -2,7 +2,7 @@ body.default-layout:not(.fullbleed) main {
   .content-grid-container {
     display: grid;
     grid-template-columns:  [content-col] 80ch
-                            [content-gutter] 2ch
+                            [content-gutter] 5ch
                             [aside-col] 1fr;
 
     grid-template-rows: [content] minmax(0, auto);
@@ -10,5 +10,13 @@ body.default-layout:not(.fullbleed) main {
  
   .content {
     grid-area: content / content-col / content / content-gutter;
+  }
+
+  .aside-container {
+    grid-area: content / aside-col / content / aside-col;
+    display: flex;
+    padding-top: 3em;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
