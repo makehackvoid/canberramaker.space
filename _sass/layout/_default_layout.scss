@@ -4,8 +4,25 @@ body.default-layout:not(.fullbleed) main {
     grid-template-columns:  [content-col] 80ch
                             [content-gutter] 5ch
                             [aside-col] 1fr;
-
+    
     grid-template-rows: [content] minmax(0, auto);
+
+    @media (max-width: 1000px) {
+      grid-template-columns:  [content-col] 1fr
+                              [content-gutter] 5ch
+                              [aside-col] 20ch;
+    }
+    
+    @media (max-width: 750px) {
+      grid-template-columns:  [content-col] 1fr
+                              [content-gutter] 0
+                              [aside-col] 0;
+     
+     grid-template-rows: [content] minmax(0, auto)
+                         [content-gutter] 2rem
+                         [aside] minmax(0, auto);
+    }
+
   }
  
   .content {
@@ -13,10 +30,16 @@ body.default-layout:not(.fullbleed) main {
   }
 
   .aside-container {
-    grid-area: content / aside-col / content / aside-col;
     display: flex;
-    padding-top: 3em;
+    grid-area: content / aside-col / content / aside-col;
     flex-direction: column;
     justify-content: space-around;
+    padding-top: 1em;
+    @media (max-width: 750px) {
+      grid-area: aside / content-col / aside / content-gutter;
+      flex-direction: row;
+      padding-top: 0;
+      justify-content: flex-start;
+    }
   }
 }

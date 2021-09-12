@@ -5,12 +5,27 @@
                           [content-col] 960px
                           [gutter-right] 1fr;
 
+  @media (max-width: 1000px) {
+    grid-template-columns:  [gutter-left] 2ch
+                            [content-col] 1fr
+                            [gutter-right] 2ch;
+  }
+
   grid-template-rows: [header-top] 4rem
                     [header] 110px
                     [interaction-box] 2rem
                     [navigation-box] 4rem
                     [content] minmax(0, auto)
                     [footer] 2rem [end-row];
+  
+  @media (max-width: 700px) {
+    grid-template-rows: [header-top] 1rem
+                    [header] 60px
+                    [interaction-box] 2rem
+                    [navigation-box] 4rem
+                    [content] minmax(0, auto)
+                    [footer] 2rem [end-row];
+  }
 
 
   .banner-background {
