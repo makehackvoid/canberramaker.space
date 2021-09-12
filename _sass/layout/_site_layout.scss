@@ -21,7 +21,7 @@
   @media (max-width: 700px) {
     grid-template-rows: [header-top] 1rem
                     [header] 60px
-                    [interaction-box] 2rem
+                    [interaction-box] 0
                     [navigation-box] 4rem
                     [content] minmax(0, auto)
                     [footer] 2rem [end-row];
