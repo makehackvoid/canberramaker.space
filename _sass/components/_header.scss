@@ -36,8 +36,9 @@ nav {
 
       &:hover {
         text-decoration: none;
-        color: $link;
-        border-bottom: 2px dashed $link;
+        $nav-link: darken($banner-fg, 10%);
+        color: $nav-link;
+        border-bottom: 2px dashed $nav-link;
       }
     }
 
