@@ -6,21 +6,27 @@
 
 .navigation-background {
   //background-color: $banner-bg;
+  //backdrop-filter: blur(10px);
 }
 
 .navigation-container {
 }
 
 nav {
-  font-family: Oswald;
+
+  font-family: Inconsolata;
   font-weight: 400;
   font-size: 0.8em;
-  text-transform: uppercase;
+  text-transform: lowercase;
 
   display: table;
   height: 100%;
 
-  span {
+  $nav-link: white;
+  //$nav-link-hover-bg: rgba(0, 0, 0, 0.1);
+  //$nav-link-active-bg: rgba(0, 0, 0, 0.3);
+
+  & > span {
     display: table-cell;
     vertical-align: middle;
     padding-left: 2ch;
@@ -29,23 +35,34 @@ nav {
     }
     padding-right: 2ch;
 
+    &:hover {
+      //background-color: $nav-link-hover-bg;
+    }
+
     a {
-      color: $banner-fg-accent;
+      color: $nav-link;
       text-decoration: none;
       font-size: 1.5em;
 
       &:hover {
         text-decoration: none;
-        $nav-link: white;
         color: $nav-link;
-        border-bottom: 2px dashed $nav-link;
+
+        span.text {
+          border-bottom: 2px dashed $nav-link;
+        }
       }
     }
 
     &.selected {
+      //background-color: $nav-link-active-bg;
+
       a {
-        color: $banner-fg;
-        border-bottom: 2px solid $banner-fg;
+        color: $nav-link;
+
+        span.text {
+          border-bottom: 2px solid $nav-link;
+        }
       }
     }
   }
@@ -59,7 +76,7 @@ header.siteheader {
 
     margin: 0;
 
-    font-family: Roboto;
+    font-family: Inconsolata;
     font-weight: 300;
 
     text-transform: lowercase;

@@ -1,8 +1,12 @@
 - name: Home
+  icon: "home"
   link: /
 - name: Visit us
+  icon: "map-marker-alt"
   link: /visit_us.html
 - name: Facilities
+  icon: "tools"
   link: /facilities.html
 - name: Conduct
+  icon: "user"
   link: /code_of_conduct.html
