@@ -44,6 +44,9 @@ nav {
     display: table-cell;
     vertical-align: middle;
     padding-left: 2ch;
+    &:first-child {
+      padding-left: 0;
+    }
     @media (max-width: 700px) {
       padding-left: 0;
     }
