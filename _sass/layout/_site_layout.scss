@@ -11,13 +11,13 @@
                             [gutter-right] 2ch;
   }
 
-  grid-template-rows: [header-top] 4rem
+  grid-template-rows: [header-top] 9rem
                     [header] 110px
-                    [interaction-box] 2rem
+                    [interaction-box] 4rem
                     [navigation-box] 4rem
                     [content] minmax(0, auto)
                     [footer] 2rem [end-row];
-  
+
   @media (max-width: 700px) {
     grid-template-rows: [header-top] 1rem
                     [header] 60px
@@ -29,7 +29,8 @@
 
 
   .banner-background {
-    grid-area: header-top / gutter-left / navigation-box / end-col;
+    //grid-area: header-top / gutter-left / navigation-box / end-col;
+    grid-area: header-top / gutter-left / content / end-col;
   }
 
   .navigation-background {

@@ -3,7 +3,7 @@ layout: default
 title: Code of Conduct | MakeHackVoid - Canberra Makerspace
 aside:
  - policy-inspiration:
-   title: <i class="fas fa-sticky-note"></i>note
+   title: <i class="fas fa-sticky-note"></i>
    content: This anti-harassment policy is based on the <a href='http://geekfeminism.wikia.com/wiki/Conference_anti-harassment'>example policy from the Geek Feminism wiki</a>, created by the Ada Initiative and other volunteers.
 ---
 

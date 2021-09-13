@@ -1,9 +1,11 @@
 .banner-background {
   background-color: $banner-bg;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1530124566582-a618bc2615dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
 }
 
 .navigation-background {
-  background-color: $banner-bg;
+  //background-color: $banner-bg;
 }
 
 .navigation-container {
@@ -49,8 +51,8 @@ nav {
 }
 
 header.siteheader {
-  // text-shadow: 1px 1px 4px rgba(6, 6, 6, .4);
-  // text-shadow: 1px 1px 2px rgba(6, 6, 6, .4);
+  text-shadow: 1px 1px 4px rgba(6, 6, 6, .4);
+
   .subtitle {
     color: $banner-fg-accent;
 
@@ -102,7 +104,9 @@ header.siteheader {
 
 .logo-svg {
   path {
-    fill: $banner-fg;
-    // filter: drop-shadow(4px 4px 2px rgba(6, 6, 6, .7));
+    //fill: $banner-fg;
+    fill: white;
+    //stroke: white;
+    filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, .9));
   }
 }
