@@ -2,7 +2,9 @@ header.siteheader .siteheader-layout {
   display: flex;
   height: 100%;
 
-  margin-left : -3ch;
+  @media (min-width: 1100px) {
+    margin-left : -3ch;
+  }
 
   .logo-container {
     flex: 0 0 calc( 150px + 2ch );
@@ -36,6 +38,8 @@ header.siteheader .siteheader-layout {
   .title-group {
     align-self: center;
     margin-top: -8px;
-    margin-left: 1ch;
+    @media (min-width: 701px) {
+      margin-left: 1ch;
+    }
   }
 }
