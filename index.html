@@ -6,7 +6,7 @@ title: MakeHackVoid - Canberra Makerspace
 aside:
  - location:
    title: <i class="fas fa-map-marker-alt"></i>Visit us
-   content: "<p>17 Tucana Street<br>Giralang ACT 2617</p>"
+   include: sidebar_map.html
 ---
 
 <blockquote class="intro-quote">
@@ -24,21 +24,3 @@ We hold public meetups regularly on most Tuesday nights. These meetups are where
 <p>
 Our group includes people with diverse backgrounds and interests. MakeHackVoid is dedicated to a harassment-free experience for everyone. See our <a href="/code_of_conduct.html">Code of Conduct</a>.
 </p>
-
-
-<link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
-
-<script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoiamFtZXN3aWxtb3QiLCJhIjoiY2twaHM0anU0MDZkODJ2bjc0b2M1eTFlaSJ9.iFAm02uV47C83Ne6WrBQIA';
-  const map = new mapboxgl.Map({
-  container: 'map', // container ID
-  style: 'mapbox://styles/mapbox/outdoors-v11', // style URL
-  center: [149.09658626453248, -35.21662885760703], // starting position [lng, lat]
-  zoom: 15 // starting zoom
-  });
-
-  const marker1 = new mapboxgl.Marker()
-                    .setLngLat([149.09658626453248, -35.21662885760703])
-                    .addTo(map);
-</script>

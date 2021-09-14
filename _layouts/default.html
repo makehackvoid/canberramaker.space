@@ -40,7 +40,7 @@
             {% for aside in page.aside %}
               <aside>
                 <strong>{{ aside.title }}</strong>
-                <p>{{ aside.content }}</p>
+                {% include {{ aside.include }} %}
               </aside>
             {% endfor %}
           </div>
