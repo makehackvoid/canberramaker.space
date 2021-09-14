@@ -3,10 +3,10 @@
   link: /
 - name: Visit us
   icon: "map-marker-alt"
-  link: /visit_us.html
+  link: /visit-us/
 - name: Facilities
   icon: "tools"
-  link: /facilities.html
+  link: /facilities/
 - name: Conduct
   icon: "user"
-  link: /code_of_conduct.html
+  link: /code-of-conduct/

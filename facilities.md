@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Tools | MakeHackVoid - Canberra Makerspace
+permalink: /facilities/
 ---
 Facilities
 ==========
