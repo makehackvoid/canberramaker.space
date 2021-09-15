@@ -45,6 +45,16 @@ ul, ol {
   }
 }
 
+dl {
+  dt {  
+    font-weight: bold;
+    margin-top: 0.5em;
+  }
+  dd {
+    margin-left: 0;
+  }
+}
+
 a {
   color: $link;
   text-decoration: none;
