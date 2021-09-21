@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tools | MakeHackVoid - Canberra Makerspace
+title: Facilities | MakeHackVoid - Canberra Makerspace
 permalink: /facilities/
 ---
 Facilities
