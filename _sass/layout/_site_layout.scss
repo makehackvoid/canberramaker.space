@@ -1,4 +1,9 @@
+body {
+  min-height: 100vh;
+}
+
 .site-grid-container {
+  min-height: 100vh;
   display: grid;
 
   grid-template-columns:  [gutter-left] 1fr
@@ -37,7 +42,7 @@
     grid-area: navigation-box / gutter-left / content / end-col;
   }
 
-  header.siteheader {
+  header.site-header {
     grid-area: header / content-col / header / gutter-right;
   }
 
@@ -47,5 +52,9 @@
 
   main {
     grid-area: content / content-col / content / gutter-right;
+  }
+
+  footer.site-footer {
+    grid-area: footer / content-col / footer / gutter-right;
   }
 }

@@ -1,0 +1,10 @@
+footer.site-footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  small.attribution {
+    margin-left: auto;
+    font-family: Inconsolata; // TODO please move
+  }
+}
