@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Code of Conduct | MakeHackVoid - Canberra Makerspace
+title: Code of Conduct | Canberra Makerspace
 permalink: /code-of-conduct/
 ---
 
