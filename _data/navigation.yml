@@ -1,6 +1,9 @@
 - name: Home
   icon: "home"
   link: /
+#- name: Community
+#  icon: "comments"
+#  link: https://community.canberramaker.space/
 - name: Visit us
   icon: "map-marker-alt"
   link: /visit-us/
