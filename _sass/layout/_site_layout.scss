@@ -24,8 +24,8 @@ body {
                     [footer] 2rem [end-row];
 
   @media (max-width: 700px) {
-    grid-template-rows: [header-top] 1rem
-                    [header] 60px
+    grid-template-rows: [header-top] 4rem
+                    [header] 110px
                     [interaction-box] 0
                     [navigation-box] 4rem
                     [content] minmax(0, auto)
