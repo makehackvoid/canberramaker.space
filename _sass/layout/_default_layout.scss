@@ -1,7 +1,7 @@
 body.default-layout:not(.fullbleed) main {
   .content-grid-container {
     display: grid;
-    grid-template-columns:  [content-col] 80ch
+    grid-template-columns:  [content-col] 60ch
                             [content-gutter] 5ch
                             [aside-col] 1fr;
 
