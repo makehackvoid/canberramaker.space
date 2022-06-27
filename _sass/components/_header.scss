@@ -14,7 +14,6 @@
     height: 100%;
     content: "";
     backdrop-filter: blur(1px);
-
   }
 }
 
@@ -95,12 +94,14 @@ header.site-header {
     font-family: Inconsolata;
     font-weight: 300;
 
+    line-height: 2.5;
+
     text-transform: lowercase;
   }
 
   .brand {
     margin: 0;
-    line-height: 1;
+    line-height: 0.8;
 
     color: $banner-fg;
 
