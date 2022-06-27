@@ -6,3 +6,4 @@ serve
 Gemfile.lock
 .sass-cache
 .jekyll-cache
+vendor

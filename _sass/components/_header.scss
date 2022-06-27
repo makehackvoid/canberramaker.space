@@ -27,8 +27,7 @@
 }
 
 nav {
-
-  font-family: Inconsolata;
+  font-family: Fredoka;
   font-weight: 400;
   font-size: 0.8em;
   text-transform: lowercase;
@@ -37,23 +36,23 @@ nav {
   height: 100%;
 
   $nav-link: white;
-  //$nav-link-hover-bg: rgba(0, 0, 0, 0.1);
-  //$nav-link-active-bg: rgba(0, 0, 0, 0.3);
+  $nav-link-hover-bg: rgba(100, 100, 100, 0.2);
+  $nav-link-active-bg: rgba(100, 100, 100, 0.5);
 
   & > span {
     display: table-cell;
     vertical-align: middle;
     padding-left: 2ch;
-    &:first-child {
-      padding-left: 0;
-    }
+    // &:first-child {
+    //   padding-left: 0;
+    // }
     @media (max-width: 700px) {
       padding-left: 0;
     }
     padding-right: 2ch;
 
     &:hover {
-      //background-color: $nav-link-hover-bg;
+      background-color: $nav-link-hover-bg;
     }
 
     a {
@@ -65,21 +64,21 @@ nav {
         text-decoration: none;
         color: $nav-link;
 
-        span.text {
-          border-bottom: 2px dashed $nav-link;
-        }
+        // span.text {
+        //   border-bottom: 2px dashed $nav-link;
+        // }
       }
     }
 
     &.selected {
-      //background-color: $nav-link-active-bg;
+      background-color: $nav-link-active-bg;
 
       a {
         color: $nav-link;
 
-        span.text {
-          border-bottom: 2px solid $nav-link;
-        }
+        // span.text {
+        //   border-bottom: 2px solid $nav-link;
+        // }
       }
     }
   }
@@ -100,32 +99,13 @@ header.site-header {
   }
 
   .brand {
-    border-bottom: 2px solid $banner-fg-accent;
-
     margin: 0;
     line-height: 1;
 
     color: $banner-fg;
 
-    font-family: Oswald;
+    font-family: Fredoka;
     font-weight: 400;
-
-    span {
-      font-size: 1;
-    }
-
-    // text-shadow: 2px 0px red, -2px 0px blue, 4px 2px 4px rgba(6, 6, 6, .7);
-    // text-shadow: 2px 0px red, -2px 0px blue;
-    // text-shadow: 3px 0px $accent, -3px 0px $secondary;
-
-    .make {
-      font-weight: 500;
-    }
-
-    .void {
-      font-family: Hacked;
-      font-size: 1.16em;
-    }
   }
 }
 

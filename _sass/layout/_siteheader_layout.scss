@@ -22,9 +22,10 @@ header.site-header .siteheader-layout {
   }
 
   .brand {
-    font-size: calc( 110px - 40px);
+    font-size: calc(120px - 40px);
+
     @media (max-width: 700px) {
-      font-size: calc( 60px - 20px);
+      font-size: calc(60px - 20px);
     }
   }
 

@@ -4,9 +4,19 @@ body.default-layout main {
   }
 
   .aside-container aside {
+    background-color: darken($bg-color, 3%);
+    border-radius: 20px;
+    padding: 20px;
+
+    strong {
+      font-family: Fredoka;
+      font-weight: 500;
+    }
+
     strong .fas, .fa {
       padding-right: 5px;
     }
+
     p {
       margin: 0.5em 0;
       line-height: 1.15;
