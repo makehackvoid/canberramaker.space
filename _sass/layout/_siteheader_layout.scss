@@ -7,7 +7,10 @@ header.site-header .siteheader-layout {
   }
 
   .logo-container {
-    flex: 0 0 calc( 150px + 2ch );
+    margin-top: -2em;
+    margin-bottom: -1em;
+
+    flex: 0 0 calc( 210px + 2ch );
     @media (max-width: 700px) {
       flex: 0 0 calc( 60px + 2ch );
     }
