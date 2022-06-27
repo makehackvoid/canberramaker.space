@@ -4,8 +4,9 @@ body.default-layout main {
   }
 
   .aside-container aside {
-    background-color: darken($bg-color, 3%);
+    border: 1px solid lightgray;
     border-radius: 20px;
+
     padding: 20px;
 
     strong {

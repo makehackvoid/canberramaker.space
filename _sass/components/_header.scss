@@ -3,8 +3,9 @@
   z-index: -1;
 
   background-color: $banner-bg;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("/assets/images/tools.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("/assets/images/shelves.jpg");
   background-size: cover;
+  background-position: center;
 
   &:after {
     position: absolute;
