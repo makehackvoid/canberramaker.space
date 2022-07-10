@@ -4,12 +4,15 @@
 #- name: Community
 #  icon: "comments"
 #  link: https://community.canberramaker.space/
-- name: Visit us
-  icon: "map-marker-alt"
-  link: /visit-us/
+- name: Membership
+  icon: "users"
+  link: /membership/
 - name: Facilities
   icon: "tools"
   link: /facilities/
+- name: Visit us
+  icon: "map-marker-alt"
+  link: /visit-us/
 - name: Conduct
   icon: "user"
   link: /code-of-conduct/
