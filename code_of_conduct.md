@@ -4,8 +4,7 @@ title: Code of Conduct | Canberra Makerspace
 permalink: /code-of-conduct/
 ---
 
-Code of Conduct
-===============
+# Code of Conduct
 
 Make, Hack, Void is dedicated to providing a harassment-free experience for everyone, regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of people at our events or space in any form. People violating these rules may be sanctioned or expelled from the space or the event at the discretion of any Make, Hack, Void member.
 

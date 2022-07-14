@@ -3,8 +3,6 @@ layout: default
 title: Facilities | Canberra Makerspace
 permalink: /facilities/
 ---
-# Facilities
-
 ## Areas
 * Garage/workshop area with workbenches suitable for woodwork, metalwork and mechanical jobs
 * Indoor meeting area with space for working on projects, suitable for electronics, smaller projects and crafts
