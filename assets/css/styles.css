@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+body { min-height: 100vh; }
+
+.site-grid-container { min-height: 100vh; display: grid; grid-template-columns: [gutter-left] 1fr [content-col] 960px [gutter-right] 1fr; grid-template-rows: [header-top] 10rem [header] 150px [interaction-box] 3rem [navigation-box] 4rem [content] minmax(0, auto) [footer] 2rem [end-row]; }
+
+@media (max-width: 1000px) { .site-grid-container { grid-template-columns: [gutter-left] 2ch [content-col] 1fr [gutter-right] 2ch; } }
+
+@media (max-width: 700px) { .site-grid-container { grid-template-rows: [header-top] 4rem [header] 110px [interaction-box] 0 [navigation-box] 4rem [content] minmax(0, auto) [footer] 2rem [end-row]; } }
+
+.site-grid-container .banner-background { grid-area: header-top / gutter-left / content / end-col; }
+
+.site-grid-container .navigation-background { grid-area: navigation-box / gutter-left / content / end-col; }
+
+.site-grid-container header.site-header { grid-area: header / content-col / header / gutter-right; }
+
+.site-grid-container .navigation-container { grid-area: navigation-box / content-col / navigation-box / gutter-right; }
+
+.site-grid-container main { grid-area: content / content-col / content / gutter-right; }
+
+.site-grid-container footer.site-footer { grid-area: footer / content-col / footer / gutter-right; }
+
+header.site-header .siteheader-layout { display: flex; height: 100%; }
+
+@media (min-width: 1100px) { header.site-header .siteheader-layout { margin-left: -3ch; } }
+
+header.site-header .siteheader-layout .logo-container { margin-top: -2em; margin-bottom: -1em; flex: 0 0 calc( 210px + 2ch); }
+
+@media (max-width: 700px) { header.site-header .siteheader-layout .logo-container { flex: 0 0 calc( 85px + 2ch); } }
+
+@media (max-width: 400px) { header.site-header .siteheader-layout .logo-container { display: none; } }
+
+header.site-header .siteheader-layout .logo-container .logo-svg { height: 100%; width: 100%; margin-left: -1ch; }
+
+header.site-header .siteheader-layout .brand { font-size: calc(120px - 40px); }
+
+@media (max-width: 700px) { header.site-header .siteheader-layout .brand { font-size: calc(60px - 20px); } }
+
+header.site-header .siteheader-layout .subtitle { font-size: 30px; }
+
+@media (max-width: 700px) { header.site-header .siteheader-layout .subtitle { font-size: 19px; } }
+
+header.site-header .siteheader-layout .title-group { align-self: center; margin-top: -8px; }
+
+@media (min-width: 701px) { header.site-header .siteheader-layout .title-group { margin-left: 1ch; } }
+
+footer.site-footer { display: flex; width: 100%; align-items: center; }
+
+footer.site-footer small.attribution { margin-left: auto; font-family: Inconsolata; }
+
+body.default-layout:not(.fullbleed) main .content-grid-container { display: grid; grid-template-columns: [content-col] 60ch [content-gutter] 5ch [aside-col] 1fr; grid-template-rows: [content] minmax(0, auto); }
+
+@media (max-width: 1000px) { body.default-layout:not(.fullbleed) main .content-grid-container { grid-template-columns: [content-col] 3fr [content-gutter] 5ch [aside-col] 2fr; } }
+
+@media (max-width: 750px) { body.default-layout:not(.fullbleed) main .content-grid-container { grid-template-columns: [content-col] 1fr [content-gutter] 0 [aside-col] 0; grid-template-rows: [content] minmax(0, auto) [content-gutter] 2rem [aside] minmax(0, auto); } }
+
+body.default-layout:not(.fullbleed) main .content { grid-area: content / content-col / content / content-gutter; }
+
+body.default-layout:not(.fullbleed) main .aside-container { display: flex; grid-area: content / aside-col / content / aside-col; flex-direction: column; gap: 1em; padding-top: 1em; }
+
+@media (max-width: 750px) { body.default-layout:not(.fullbleed) main .aside-container { grid-area: aside / content-col / aside / content-gutter; flex-direction: row; padding-top: 0; justify-content: flex-start; } }
+
+@media (max-width: 750px) { body.default-layout:not(.fullbleed) main .aside-container aside { width: 100%; } }
+
+.banner-background { position: relative; z-index: -1; background-color: #E7ECEF; background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("/assets/images/shelves.jpg"); background-size: cover; background-position: center; }
+
+.banner-background:after { position: absolute; top: 0; left: 0; width: 100%; height: 100%; content: ""; backdrop-filter: blur(1px); }
+
+nav { height: 100%; font-family: Fredoka; font-weight: 400; font-size: 0.8em; text-transform: lowercase; }
+
+nav > ul { display: flex; height: 100%; list-style-type: none; margin: 0; padding: 0; }
+
+nav ul li { padding-left: 2ch; padding-right: 2ch; }
+
+@media (max-width: 700px) { nav ul li { padding-left: 0; } }
+
+nav ul li:hover { background-color: rgba(100, 100, 100, 0.2); }
+
+nav ul li a { height: 100%; display: flex; align-items: center; color: white; text-decoration: none; font-size: 1.5em; }
+
+nav ul li a .text { margin-left: 0.5ch; }
+
+nav ul li a:hover { text-decoration: none; color: white; }
+
+nav ul li.selected { background-color: rgba(100, 100, 100, 0.5); }
+
+nav ul li.selected a { color: white; }
+
+header.site-header { text-shadow: 1px 1px 10px rgba(6, 6, 6, 0.4); }
+
+header.site-header .subtitle { color: white; margin: 0; font-family: Inconsolata; font-weight: 300; line-height: 2.5; text-transform: lowercase; }
+
+header.site-header .brand { margin: 0; line-height: 0.8; color: white; font-family: Fredoka; font-weight: 400; }
+
+.logo-container { display: inline-block; }
+
+.logo-container:before { border-radius: 50%; height: 100%; }
+
+.logo-svg path { fill: white; filter: drop-shadow(1px 1px 10px rgba(6, 6, 6, 0.4)); }
+
+hr { border-style: none; border-top: 2px solid #001021; }
+
+body { background-color: #FBFBFB; color: #001021; font-family: Lato; font-weight: 400; margin: 0; padding: 0; }
+
+h1, h2 { font-family: Fredoka; font-weight: 400; }
+
+blockquote { font-size: 1.5em; font-family: Fredoka; line-height: 1.15; font-weight: 400; }
+
+@media (max-width: 700px) { blockquote { margin: 1em 1ch; } }
+
+.announcement { margin-top: 2em; padding: 2em; border-radius: 10px; background-color: #E7ECEF; }
+
+.announcement h1 { margin: 0px; }
+
+@media (max-width: 700px) { ul, ol { padding-inline-start: 2ch; } }
+
+dl dt { font-weight: bold; margin-top: 0.5em; }
+
+dl dd { margin-left: 0; }
+
+a { color: #1A5974; text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+.sidebar-map { height: 25vh; border-radius: 10px; }
+
+.map { height: 50vh; border-radius: 10px; }
+
+body.default-layout main .banner-image { background-position: center; }
+
+body.default-layout main .aside-container aside { border: 1px solid lightgray; border-radius: 20px; padding: 20px; }
+
+body.default-layout main .aside-container aside strong { font-family: Fredoka; font-weight: 500; }
+
+body.default-layout main .aside-container aside strong .fas, body.default-layout main .aside-container aside .fa { padding-right: 5px; }
+
+body.default-layout main .aside-container aside p { margin: 0.5em 0; line-height: 1.15; }
+
+ul.contact-list { list-style-type: none; font-size: 0.95em; padding: 0; }
+
+table.membership-fees { border-collapse: collapse; }
+
+table.membership-fees td { border: 1px solid grey; padding: 1ch; }
+
+table.membership-fees ul { padding: 0; list-style-type: none; }
+
+table.membership-fees ul li { padding: 0.25em 0; }
+
+table.membership-fees ul li:first-child { padding-top: 0; }
+
+table.membership-fees ul li:last-child { padding-bottom: 0; }
+
+table.membership-fees a.signup { font-weight: bold; }
+
+@font-face { font-family: Hacked; src: url("/assets/fonts/HACKED.ttf") format("truetype"); }
+
+@font-face { font-family: Oswald; font-weight: 500; src: url("/assets/fonts/Oswald-Medium.ttf") format("truetype"); }
+
+@font-face { font-family: Oswald; font-weight: 400; src: url("/assets/fonts/Oswald-Regular.ttf") format("truetype"); }
+
+@font-face { font-family: Oswald; font-weight: 300; src: url("/assets/fonts/Oswald-Light.ttf") format("truetype"); }
+
+/*# sourceMappingURL=styles.css.map */
