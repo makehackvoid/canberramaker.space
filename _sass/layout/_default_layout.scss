@@ -33,7 +33,7 @@ body.default-layout:not(.fullbleed) main {
     display: flex;
     grid-area: content / aside-col / content / aside-col;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 1em;
     padding-top: 1em;
     @media (max-width: 750px) {
       grid-area: aside / content-col / aside / content-gutter;
