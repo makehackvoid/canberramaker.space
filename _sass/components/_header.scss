@@ -27,21 +27,25 @@
 }
 
 nav {
+  height: 100%;
   font-family: Fredoka;
   font-weight: 400;
   font-size: 0.8em;
   text-transform: lowercase;
 
-  display: table;
-  height: 100%;
+  & > ul {
+    display: flex;
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 
   $nav-link: white;
   $nav-link-hover-bg: rgba(100, 100, 100, 0.2);
   $nav-link-active-bg: rgba(100, 100, 100, 0.5);
 
-  & > span {
-    display: table-cell;
-    vertical-align: middle;
+  ul li {
     padding-left: 2ch;
     // &:first-child {
     //   padding-left: 0;
@@ -56,9 +60,17 @@ nav {
     }
 
     a {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
       color: $nav-link;
       text-decoration: none;
       font-size: 1.5em;
+
+      .text {
+        margin-left: 0.5ch;
+      }
 
       &:hover {
         text-decoration: none;

@@ -8,9 +8,9 @@ body.default-layout:not(.fullbleed) main {
     grid-template-rows: [content] minmax(0, auto);
 
     @media (max-width: 1000px) {
-      grid-template-columns:  [content-col] 1fr
+      grid-template-columns:  [content-col] 3fr
                               [content-gutter] 5ch
-                              [aside-col] 20ch;
+                              [aside-col] 2fr;
     }
 
     @media (max-width: 750px) {
@@ -40,6 +40,11 @@ body.default-layout:not(.fullbleed) main {
       flex-direction: row;
       padding-top: 0;
       justify-content: flex-start;
+    }
+    aside {
+      @media (max-width: 750px) {
+        width: 100%;
+      }
     }
   }
 }
