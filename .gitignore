@@ -7,3 +7,5 @@ Gemfile.lock
 .sass-cache
 .jekyll-cache
 vendor
+
+/.direnv/
