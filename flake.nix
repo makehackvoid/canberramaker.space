@@ -1,5 +1,5 @@
 {
-  description = "xelatex flake";
+  description = "canberramaker.space website flake";
 
   # Use the unstable nixpkgs to use the latest set of node packages
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
