@@ -1,9 +1,9 @@
 - name: Home
   icon: "home"
   link: /
-#- name: Community
-#  icon: "comments"
-#  link: https://community.canberramaker.space/
+- name: Community
+  icon: "comments"
+  link: https://community.canberramaker.space/
 - name: Membership
   icon: "users"
   link: /membership/
