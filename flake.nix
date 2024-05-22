@@ -1,5 +1,5 @@
 {
-  description = "canberramaker.space website flake";
+  description = "opendata.fit development environment for the webapp and frontend packages";
 
   # Use the unstable nixpkgs to use the latest set of node packages
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
@@ -17,7 +17,15 @@
     in {
       devShells.default = pkgs.mkShell {
         buildInputs = [
-          pkgs.ruby
+          # Set the major version of Node.js
+          pkgs.nodejs-18_x
+          pkgs.yarn
+          pkgs.nodePackages.typescript
+          # pkgs.nodePackages.typescript-language-server
+
+          # dependencies for grip markdown viewer
+          pkgs.python310
+          pkgs.python310.pkgs.grip
         ];
       };
     });
