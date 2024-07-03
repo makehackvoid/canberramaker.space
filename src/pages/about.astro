@@ -1,48 +1,93 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'About';
-const description = 'About your blog.';
+const title = 'Facilities | Canberra Makerspace';
+const description = 'List of facilities at Canberra Makerspace';
 const permalink = `${Astro.site.href}about`;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} current="about">
   <div class="container">
-    <h1>About</h1>
-    <figure class="about-image">
-      <img src="/assets/about-illustration.webp" alt="Illustration of a notebook" width="330">
-      <figcaption>
-        Illustration by
-        <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
-        from
-        <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a>
-      </figcaption>
-    </figure>
-    <p>Text placeholder via <a href="https://jeffsum.com/" target="_blank">Jeffsum</a>.</p>
-    <p>So you two dig up, dig up dinosaurs? What do they got in there? King Kong? My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard! Life finds a way. God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs.</p>
-    <p>You really think you can fly that thing? You know what? It is beets. I've crashed into a beet truck. Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Is this my espresso machine? Wh-what is-h-how did you get my espresso machine?</p>
-    <p>Hey, you know how I'm, like, always trying to save the planet? Here's my chance. Hey, take a look at the earthlings. Goodbye! I was part of something special. Just my luck, no ice. You're a very talented young man, with your own clever thoughts and ideas. Do you need a manager?</p>
-    <p>Jaguar shark! So tell me - does it really exist? This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Yes, Yes, without the oops! You're a very talented young man, with your own clever thoughts and ideas. Do you need a manager?</p>
-    <p>Yes, Yes, without the oops! Do you have any idea how long it takes those cups to decompose. They're using our own satellites against us. And the clock is ticking. Do you have any idea how long it takes those cups to decompose. My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!</p>
+
+    <h1>Facilities</h1>
+
+    <h2>Areas</h2>
+    <ul>
+      <li>Garage/workshop area with workbenches suitable for woodwork, metalwork and mechanical jobs</li>
+      <li>Indoor meeting area with space for working on projects, suitable for electronics, smaller projects and crafts</li>
+      <li>Informal space with couch and kitchenette for hanging out</li>
+    </ul>
+
+    <h2>Workshop equipment</h2>
+    <h3>General</h3>
+    <ul>
+      <li>Handheld power tools - drills and drivers</li>
+      <li>Heat guns, sealing iron</li>
+      <li>Stanley knives, scoring knives</li>
+      <li>Small & large clamps</li>
+      <li>PPE - eye/ear protection, gloves</li>
+    </ul>
+
+    <h3>Woodwork</h3>
+    <ul>
+      <li>Wood lathe (w/ wood turning tools)</li>
+      <li>Circular saws (w/ tracks)</li>
+      <li>Drop saws</li>
+      <li>Compound mitre saws</li>
+      <li>Jigsaws</li>
+      <li>Reciprocating saw</li>
+      <li>Multi-tool</li>
+      <li>Belt & disc sanders</li>
+      <li>Hand tools - chisels, files, hand plane, saws, hammers</li>
+      <li>Kreg joining jigs</li>
+      <li>Band saw</li>
+      <li>(Needs setup) Table saw</li>
+      <li>(Needs setup) Router table</li>
+    </ul>
+
+    <h3>Metalwork</h3>
+    <ul>
+      <li>MIG welder and consumables</li>
+      <li>TIG welder on request or BYO (Argon gas available)</li>
+      <li>Stick welder and consumables</li>
+      <li>Angle grinder</li>
+      <li>Table top grinders</li>
+      <li>Drill press</li>
+    </ul>
+
+    <h3>Mechancial</h3>
+    <ul>
+      <li>Socket sets</li>
+      <li>Wrenches</li>
+      <li>Screwdrivers with various bits and allen keys</li>
+      <li>Jacks and jack stands</li>
+      <li>Duct tape and cable ties ;)</li>
+    </ul>
+
+    <h3>Materials</h3>
+    <ul>
+      <li>Miscellaneous paints, solvents, cleaners and lubricants</li>
+      <li>Recycled/pallet wood</li>
+      <li>Scrap metal tubing</li>
+      <li>Fasteners (screws, bolts)</li>
+    </ul>
+
+    <h3>Electronics</h3>
+    <ul>
+      <li>Soldering & rework stations and tools</li>
+      <li>Oscilloscopes and multimeters</li>
+      <li>Various SMD & through-hole components available</li>
+    </ul>
+
+    <h3>Light duty/prototyping</h3>
+    <ul>
+      <li>Small scale laser cutter suitable for MDF, plywood & acrylic</li>
+      <li>(Need setup) 3D printers</li>
+      <li>Industrial sewing machine</li>
+      <li>Light duty sewing machine</li>
+    </ul>
   </div>
 </BaseLayout>
 
 <style>
-  .about-image {
-    float: right;
-    margin: -3em -7em 2em 2em;
-    max-width: 300px;
-  }
-
-  .about-image img {
-    border-radius: 8px;
-    margin-bottom: 1.5em;
-  }
-
-  @media (max-width: 1020px) {
-    .about-image {
-      float: none;
-      margin: 0 auto 2em;
-    }
-  }
 </style>
