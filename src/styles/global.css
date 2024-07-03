@@ -3,8 +3,7 @@
   --text-main: #36393b;
   --text-secondary: #6b6f72;
   --primary-color: #548e9b;
-  --font-family-serif: Merriweather, serif;
-  --font-family-sans: 'Fira Sans', sans-serif;
+  --font-family-sans: 'Inter', sans-serif;
 }
 
 :root.theme-dark {
@@ -33,9 +32,9 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-sans);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1;
   background-color: var(--background-body);
   color: var(--text-main);
 }
@@ -53,7 +52,6 @@ h6 {
 }
 
 h1 {
-  font-family: var(--font-family-serif);
   font-size: 4em;
   margin: 0 0 1em 0;
 }
