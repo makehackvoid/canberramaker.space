@@ -9,36 +9,77 @@ const permalink = Astro.site.href;
 <BaseLayout title={title} description={description} permalink={permalink}>
   <div class="home-container">
     <div class="home-copy">
-      <h1>Canberra Makerspace</h1>
-      <h2>Make Hack Void</h2>
-      <p>
-        Canberra Makerspace is a space for makers, hackers and aspiring
-        creators of all kinds to meet, share knowledge, and work on projects
-        together. We provide ACT residents with a multi-use workshop and
-        meeting space in Giralang.
-      </p>
-      <p>
-        We hold public meetups on a weekly basis. These meetups are where we
-        invite you to join us and chat, get help or advice, or use our space to
-        work on your projects. Our current regular opening hours are:
+      <section class="blurb">
+        <h1>Canberra Makerspace</h1>
+        <h2>Make Hack Void</h2>
+        <p>
+          Canberra Makerspace is a community-driven workshop where people from
+          all walks of life can meet and collaborate. We provide a space for
+          makers and aspiring makers to bring their ideas to life with access to
+          tools, resources, and a supportive community.
+        </p>
+        <p>
+          Our regular public opening hours are:
+        </p>
         <ul>
-        <li>Wednesdays, 6:30pm (electronics)</li>
-        <li>Sundays, 1pm-4pm (general making)</li>
+          <li>Wednesdays, 6:30pm (electronics)</li>
+          <li>Sundays, 1pm-4pm (general making)</li>
         </ul>
-      </p>
-      <p>
-        Other planned events or notifications of the space opening are posted
-        in our Facebook and Discord groups as they happen.
-      </p>
-      <p>
-        See our Facilities page for a list of equipment we currently have
-        available for public use.
-      </p>
-      <p>
-        Our group includes people with diverse backgrounds and interests. We
-        are dedicated to maintaining an inclusive environment for everyone. See
-        our Code of Conduct.
-      </p>
+        <p>
+          Members with key access may open the space to the public at other
+          times. Notifications of this are posted on our Discord and Facebook
+          groups as they happen.
+        </p>
+        <p>
+          See our Facilities page for a list of facilities and equipment we
+          currently have available for public use.
+        </p>
+        <p>
+          Our group includes people with diverse backgrounds and interests. We
+          are dedicated to maintaining an inclusive environment for everyone. See
+          our Code of Conduct.
+        </p>
+      </section>
+
+      <section class="payments">
+        <a target="_blank" href="https://square.link/u/O8hLWT2C">
+          One-off visit
+        </a>
+        <a target="_blank" href="https://square.link/u/XX0WC6Q6">
+          Monthly membership
+        </a>
+        <a target="_blank" href="https://square.link/u/5INjqIUr">
+          Utilities contribution
+        </a>
+        <a target="_blank" href="https://square.link/u/PNl1Z78q">
+          One-off donation
+        </a>
+      </section>
+
+      <section class="calendar">
+        <object data="https://calendar.google.com/calendar/embed?src=canberramakerspace%40gmail.com&amp;ctz=Australia%2FSydney" style="border: 0" width="100%" height="400" frameborder="0" scrolling="no"></object>
+      </section>
+
+      <section class="location">
+        <div id="map" class="map"></div>
+
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+
+        <script>
+          mapboxgl.accessToken = 'pk.eyJ1IjoiamFtZXN3aWxtb3QiLCJhIjoiY2twaHM0anU0MDZkODJ2bjc0b2M1eTFlaSJ9.iFAm02uV47C83Ne6WrBQIA';
+          const map = new mapboxgl.Map({
+          container: 'map', // container ID
+          style: 'mapbox://styles/mapbox/outdoors-v11', // style URL
+          center: [149.09658626453248, -35.21662885760703], // starting position [lng, lat]
+          zoom: 15 // starting zoom
+          });
+
+          const marker1 = new mapboxgl.Marker()
+                            .setLngLat([149.09658626453248, -35.21662885760703])
+                            .addTo(map);
+        </script>
+      </section>
     </div>
   </div>
 </BaseLayout>
