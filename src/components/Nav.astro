@@ -55,8 +55,7 @@ const { current = '' } = Astro.props;
 </style>
 
 <nav>
-  <a class={current === "" ? "selected" : ""} href="/">home</a>
-  <a href="https://community.canberramaker.space/" target="_blank">forum</a>
   <a class={current === "facilities" ? "selected" : ""} href="/facilities">facilities</a>
   <a class={current === "conduct" ? "selected" : ""} href="/conduct">code of conduct</a>
+  <a href="https://community.canberramaker.space/" target="_blank">community</a>
 </nav>
