@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+import Map from '../components/Map';
+
 const title = 'Canberra Makerspace';
 const description = 'Canberra\'s community makerspace.';
 const permalink = Astro.site.href;
@@ -62,24 +64,11 @@ const permalink = Astro.site.href;
 
       <section class="location">
         <h1>Location</h1>
-        <div id="map" class="map"></div>
+        <div class="map-container">
+          <Map client:load />
+        </div>
 
-        <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
-        <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
 
-        <script>
-          mapboxgl.accessToken = 'pk.eyJ1IjoiamFtZXN3aWxtb3QiLCJhIjoiY2twaHM0anU0MDZkODJ2bjc0b2M1eTFlaSJ9.iFAm02uV47C83Ne6WrBQIA';
-          const map = new mapboxgl.Map({
-          container: 'map', // container ID
-          style: 'mapbox://styles/mapbox/outdoors-v11', // style URL
-          center: [149.09658626453248, -35.21662885760703], // starting position [lng, lat]
-          zoom: 15 // starting zoom
-          });
-
-          const marker1 = new mapboxgl.Marker()
-                            .setLngLat([149.09658626453248, -35.21662885760703])
-                            .addTo(map);
-        </script>
       </section>
 
       <section class="links">
@@ -118,6 +107,12 @@ const permalink = Astro.site.href;
 
   .home-copy p {
     font-size: 1.4em;
+  }
+
+  .map-container {
+    position: relative;
+    height: 300px;
+    width: 300px;
   }
 
   @media (max-width: 1200px) {
