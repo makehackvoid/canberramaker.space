@@ -3,12 +3,12 @@
   --text-main: #36393b;
   --text-secondary: #6b6f72;
   --primary-color: #548e9b;
-  --font-family-sans: 'Inter', sans-serif;
-  --font-family-code: 'Inconsolata', sans-serif;
-  --font-family-monospace: 'Agave', sans-serif;
-  --font-family-brand: 'Averia Sans Libre Bold', sans-serif;
-  --font-family-brand-light: 'Averia Sans Libre Light', sans-serif;
-  --font-family-mhv: 'Press Start 2P', sans-serif;
+  --font-family-sans: "Inter", sans-serif;
+  --font-family-code: "Inconsolata", sans-serif;
+  --font-family-monospace: "Agave", sans-serif;
+  --font-family-brand: "Averia Sans Libre Bold", sans-serif;
+  --font-family-brand-light: "Averia Sans Libre Light", sans-serif;
+  --font-family-mhv: "Press Start 2P", sans-serif;
 }
 
 :root.theme-dark {
@@ -114,8 +114,12 @@ a:hover {
 p a {
   text-decoration: none;
   box-shadow: inset 0 -0.12em 0 var(--primary-color);
-  -webkit-transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-  transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition:
+    box-shadow 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  transition:
+    box-shadow 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 
 p a:hover {
@@ -137,7 +141,7 @@ hr {
 }
 
 code {
-  font-family: 'SF Mono', menlo, inconsolata, monospace;
+  font-family: "SF Mono", menlo, inconsolata, monospace;
   font-size: calc(1em - 2px);
   color: #555;
   padding: 0.2em 0.4em;
@@ -220,7 +224,9 @@ td {
 
 .theme-toggle > label:focus-within {
   outline: 2px solid transparent;
-  box-shadow: 0 0 0 0.08em var(--theme-accent), 0 0 0 0.12em white;
+  box-shadow:
+    0 0 0 0.08em var(--theme-accent),
+    0 0 0 0.12em white;
 }
 
 .theme-toggle > label {
@@ -238,7 +244,7 @@ td {
   opacity: 1;
 }
 
-input[name='theme-toggle'] {
+input[name="theme-toggle"] {
   position: absolute;
   opacity: 0;
   top: 0;

@@ -24,5 +24,8 @@
     "solid-map-gl": "^1.11.3",
     "svelte": "^4.2.17",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "prettier": "3.4.2"
   }
 }
