@@ -6,6 +6,9 @@
   --font-family-sans: 'Inter', sans-serif;
   --font-family-code: 'Inconsolata', sans-serif;
   --font-family-monospace: 'Agave', sans-serif;
+  --font-family-brand: 'Averia Sans Libre Bold', sans-serif;
+  --font-family-brand-light: 'Averia Sans Libre Light', sans-serif;
+  --font-family-mhv: 'Press Start 2P', sans-serif;
 }
 
 :root.theme-dark {
@@ -47,7 +50,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family-sans);
+  font-family: var(--font-family-brand);
+  text-transform: lowercase;
   font-weight: 700;
   line-height: 1.2;
   margin: 0 0 0.5em 0;

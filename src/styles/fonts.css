@@ -31,3 +31,27 @@
   src: url('/assets/fonts/Agave-Regular.ttf')
             format('truetype');
 }
+
+@font-face {
+  font-family: 'Averia Sans Libre Bold';
+  src: url('/assets/fonts/AveriaSansLibre-Bold.ttf')
+            format('truetype');
+}
+
+@font-face {
+  font-family: 'Averia Sans Libre Regular';
+  src: url('/assets/fonts/AveriaSansLibre-Regular.ttf')
+            format('truetype');
+}
+
+@font-face {
+  font-family: 'Averia Sans Libre Light';
+  src: url('/assets/fonts/AveriaSansLibre-Light.ttf')
+            format('truetype');
+}
+
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('/assets/fonts/PressStart2P-Regular.ttf')
+            format('truetype');
+}
