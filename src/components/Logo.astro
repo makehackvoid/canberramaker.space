@@ -1,20 +1,17 @@
----
-import logoIcons from "../svgs/logo_icons.svg?raw"; 
----
-<div class="logo-container">
-  <Fragment set:html={logoIcons} />
-</div>
+<picture class="logo-container">
+  <source srcset="/assets/logos/icons_white.svg" media="(prefers-color-scheme:dark)">
+  <source srcset="/assets/logos/icons_black.svg" media="(prefers-color-scheme:light)">
+  <img src="/assets/logos/icons_black.svg">
+</picture>
 
 <style>
   .logo-container {
-    margin-right: 2ch;
-
-    svg {
+    img {
       height: 4rem;
       width: auto;
     }
   }
-
+  
   @media screen and (max-width: 520px) {
     img {
       display: none;

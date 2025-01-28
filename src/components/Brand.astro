@@ -5,8 +5,14 @@ import Logo from './Logo.astro'
 <style>
   .brand {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 2ch;
+    
+    a {
+      text-decoration: none;
+      box-shadow: inset 0 -1.5em 0 var(--primary-color);
+    }
   }
 
   h1 {
@@ -19,9 +25,8 @@ import Logo from './Logo.astro'
 
   .byline {
     font-family: var(--font-family-mhv);
-    font-size: 2em;
-    font-weight: 550;
-    text-transform: smallcaps;
+    font-size: 1.5em;
+    font-weight: 350;
   }
 </style>
 
@@ -31,6 +36,6 @@ import Logo from './Logo.astro'
   </a>
   <div>
     <h1>Canberra Makerspace</h1>
-    <span class="byline">make hack void</span>
+    <span class="byline">> make hack void</span>
   </div>
 </div>

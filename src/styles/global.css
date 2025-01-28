@@ -4,18 +4,19 @@
   --text-secondary: #6b6f72;
   --primary-color: #548e9b;
   --font-family-sans: "Inter", sans-serif;
-  --font-family-code: "Inconsolata", sans-serif;
-  --font-family-monospace: "Agave", sans-serif;
+  --font-family-monospace: "JetBrains Mono", sans-serif;
   --font-family-brand: "Averia Sans Libre Bold", sans-serif;
   --font-family-brand-light: "Averia Sans Libre Light", sans-serif;
-  --font-family-mhv: "Press Start 2P", sans-serif;
+  --font-family-mhv: "JetBrains Mono", sans-serif;
 }
 
-:root.theme-dark {
-  --background-body: #202122;
-  --text-main: #fff;
-  --text-secondary: #ccc;
-  --primary-color: #548e9b;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-body: #202122;
+    --text-main: #fff;
+    --text-secondary: #ccc;
+    --primary-color: #548e9b;
+  }
 }
 
 html {
@@ -38,8 +39,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-family-sans);
-  font-size: 18px;
-  line-height: 1;
+  font-size: 16px;
   background-color: var(--background-body);
   color: var(--text-main);
 }
@@ -50,7 +50,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family-brand);
+  font-family: var(--font-family-monospace);
   text-transform: lowercase;
   font-weight: 700;
   line-height: 1.2;
@@ -102,6 +102,7 @@ li p {
   margin-top: 0.5rem;
 }
 
+/*
 a {
   color: inherit;
   transition: color linear 0.15s;
@@ -110,8 +111,10 @@ a {
 a:hover {
   color: var(--primary-color);
 }
+*/
 
-p a {
+a {
+  color: inherit;
   text-decoration: none;
   box-shadow: inset 0 -0.12em 0 var(--primary-color);
   -webkit-transition:
@@ -122,7 +125,7 @@ p a {
     color 0.2s ease-in-out;
 }
 
-p a:hover {
+a:hover {
   box-shadow: inset 0 -1.5em 0 var(--primary-color);
   color: #fff;
 }
