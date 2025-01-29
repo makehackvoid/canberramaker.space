@@ -17,7 +17,9 @@ const { title, description, permalink, current } = Astro.props;
 </head>
 <body>
   <div class="layout">
-    <Header current={current} />
+    <div class="header-container">
+      <Header current={current} />
+    </div>
 
     <main>
       <slot />
@@ -36,11 +38,15 @@ const { title, description, permalink, current } = Astro.props;
     min-height: 100vh;
   }
 
+  .header-container {
+    margin-top: 2em;
+  }
+
   main {
     flex: 1;
     position: relative;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 75ch;
     padding: 1em 2em;
     box-sizing: border-box;
     width: 100%;
