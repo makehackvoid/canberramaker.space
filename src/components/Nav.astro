@@ -4,7 +4,6 @@ const { current = '' } = Astro.props;
 
 <style>
   nav {
-    margin-top: 2em;
     align-items: center;
     display: flex;
     flex: 1;
@@ -30,8 +29,8 @@ const { current = '' } = Astro.props;
 </style>
 
 <nav>
-  <a class={current === "facilities" ? "selected" : ""} href="/facilities">🛠️ facilities</a>
-  <a href="https://www.instagram.com/canberra.makerspace" target="_blank">📷 instagram</a>
-  <a href="https://www.facebook.com/groups/357947732276" target="_blank">👤 facebook</a>
+  <a class={current === "thespace" ? "selected" : ""} href="/thespace">🛠️ the space</a>
+  <a class={current === "membership" ? "selected" : ""} href="/membership">💡 get involved</a>
   <a href="https://community.canberramaker.space/" target="_blank">🗩 forum</a>
+  <a href="https://www.instagram.com/canberra.makerspace" target="_blank">🗪  discord</a>
 </nav>
