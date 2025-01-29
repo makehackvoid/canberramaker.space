@@ -209,7 +209,6 @@ td {
 }
 
 .content h1 {
-  font-size: 3em;
   margin: 1em 0;
 }
 
@@ -259,7 +258,6 @@ input[name="theme-toggle"] {
 
 @media (max-width: 1020px) {
   h1 {
-    font-size: 3em;
   }
 
   .content h1 {
