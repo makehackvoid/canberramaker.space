@@ -11,61 +11,41 @@ const permalink = Astro.site.href;
 <BaseLayout title={title} description={description} permalink={permalink}>
   <div class="home-container">
     <div class="home-copy">
+      <section class="banner">
+        <video controls autoplay muted>
+          <source src="/assets/videos/banner-extended2.mp4" type="video/mp4">
+        </video>
+      </section>
       <section class="blurb">
-        <h1><span class="emoji">👋</span>Welcome</h1>
+        <h1><span class="emoji">👋</span>hi!</h1>
         <p>
-          Canberra Makerspace is a community-driven workshop where people from
-          all walks of life can meet and collaborate. We provide a space for
+          Welcome to Canberra Makerspace!
+        </p>
+        <p>
+          We're a community-driven workshop for people from
+          all walks of life to meet and collaborate. We provide a space for
           makers and aspiring makers to bring their ideas to life with access to
           tools, resources, and a supportive community.
         </p>
-        <p>
-          Visitors are welcome and encouraged to drop in and say hi during our
-          weekly public opening hours:
-        </p>
-        <ul>
-          <li>Wednesdays, 6:30pm (electronics)</li>
-          <li>Sundays, 1pm-4pm (general making)</li>
-        </ul>
-        <p>
-          Members with key access may open the space to the public at other
-          times. Notifications of this are posted on our
-          <a href="https://community.canberramaker.space/">forum</a>
-          as they happen.
-        </p>
       </section>
 
-      <section class="payments">
-        <h1><span class="emoji">💸</span>Payments</h1>
-        <p>
-          We request visitors to make a small donation of their choice when
-          they visit the space. You can also become a monthly paying member.
-          This helps us stay open and pay our bills.
-        </p>
-        <p>
-          You can pay at the door or use the payment links below.
-        </p>
-        <a target="_blank" href="https://square.link/u/PfmYcYaa">
-          Casual visit donation
-        </a>
-        <a target="_blank" href="https://square.link/u/XX0WC6Q6">
-          Monthly membership
-        </a>
-      </section>
 
       <section class="calendar">
-        <h1><span class="emoji">🗓️</span>Calendar</h1>
+        <h1><span class="emoji">🗓️</span>what's on</h1>
         <object data="https://calendar.google.com/calendar/embed?src=canberramakerspace%40gmail.com&amp;ctz=Australia%2FSydney" style="border: 0" width="100%" height="400" frameborder="0" scrolling="no"></object>
       </section>
 
       <section class="location">
-        <h1><span class="emoji">🌏</span>Location</h1>
+        <h1><span class="emoji">🌏</span>Where to find us</h1>
         <div class="map-container">
           <Map client:load />
         </div>
-
-
       </section>
+      
+      <section class="supporters">
+        <h1><span class="emoji">🙌</span>Supporters</h1>
+      </section>
+      
 
       <section class="links">
         <h1><span class="emoji">📎</span>Links</h1>
@@ -86,8 +66,12 @@ const permalink = Astro.site.href;
     display: flex;
     flex: 1;
     justify-content: center;
-    margin: 2em 0;
+    margin-bottom: 2em;
     min-height: 400px;
+  }
+
+  video {
+    width: 100%;
   }
 
   .home-copy {
@@ -106,13 +90,13 @@ const permalink = Astro.site.href;
   }
   
   section {
-    margin-bottom: 4em;
+    margin: 2em 0;
   }
 
   .map-container {
     position: relative;
     height: 500px;
-    width: 500px;
+    width: auto;
   }
 
   @media (max-width: 800px) {
@@ -123,7 +107,6 @@ const permalink = Astro.site.href;
     .home-copy {
       flex: 0;
       padding-bottom: 2em;
-      text-align: center;
     }
   }
 </style>
