@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'The Space | Canberra Makerspace';
+const description = 'List of facilities at Canberra Makerspace';
+const permalink = `${Astro.site.href}facilities`;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} current="facilities">
+  <div class="container">
+
+    <h1>The Space</h1>
+
+    <h2>Areas</h2>
+    <ul>
+      <li>Garage/workshop area with workbenches suitable for woodwork, metalwork and mechanical jobs</li>
+      <li>Indoor meeting area with space for working on projects, suitable for electronics, smaller projects and crafts</li>
+      <li>Laser cutter and 3D printing facilities room</li>
+      <li>Informal space with couch and kitchenette for hanging out</li>
+    </ul>
+
+    <h2>Workshop equipment</h2>
+    <h3>General</h3>
+    <ul>
+      <li>Handheld power tools - drills and drivers</li>
+      <li>Heat guns, sealing iron</li>
+      <li>Stanley knives, scoring knives</li>
+      <li>Small & large clamps</li>
+      <li>PPE - eye/ear protection, gloves</li>
+    </ul>
+
+    <h3>Woodwork</h3>
+    <ul>
+      <li>Wood lathe (w/ wood turning tools)</li>
+      <li>Circular saws (w/ tracks)</li>
+      <li>Drop saws</li>
+      <li>Compound mitre saws</li>
+      <li>Jigsaws</li>
+      <li>Reciprocating saw</li>
+      <li>Multi-tool</li>
+      <li>Belt & disc sanders</li>
+      <li>Hand tools - chisels, files, hand plane, saws, hammers</li>
+      <li>Kreg joining jigs</li>
+      <li>Band saw</li>
+      <li>(Needs setup) Table saw</li>
+      <li>(Needs setup) Router table</li>
+    </ul>
+
+    <h3>Metalwork</h3>
+    <ul>
+      <li>MIG welder and consumables</li>
+      <li>TIG welder on request or BYO (Argon gas available)</li>
+      <li>Stick welder and consumables</li>
+      <li>Angle grinder</li>
+      <li>Table top grinders</li>
+      <li>Drill press</li>
+    </ul>
+
+    <h3>Mechanical</h3>
+    <ul>
+      <li>Socket sets</li>
+      <li>Wrenches</li>
+      <li>Screwdrivers with various bits and allen keys</li>
+      <li>Jacks and jack stands</li>
+      <li>Duct tape and cable ties ;)</li>
+    </ul>
+
+    <h3>Materials</h3>
+    <ul>
+      <li>Miscellaneous paints, solvents, cleaners and lubricants</li>
+      <li>Recycled/pallet wood</li>
+      <li>Scrap metal tubing</li>
+      <li>Fasteners (screws, bolts)</li>
+    </ul>
+
+    <h3>Electronics</h3>
+    <ul>
+      <li>Soldering & rework stations and tools</li>
+      <li>Oscilloscopes and multimeters</li>
+      <li>Various SMD & through-hole components available</li>
+    </ul>
+
+    <h3>Light duty/prototyping</h3>
+    <ul>
+      <li>Small scale laser cutter suitable for MDF, plywood & acrylic</li>
+      <li>(Need setup) 3D printers</li>
+      <li>Industrial sewing machine</li>
+      <li>Light duty sewing machine</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+</style>
