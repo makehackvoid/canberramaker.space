@@ -1,0 +1,26 @@
+session_name: slartibartfast
+windows:
+  - window_name: utils
+    layout: even-horizontal
+    panes:
+      - yarn start
+      - null
+  - window_name: git
+    layout: even-horizontal
+    panes:
+      - shell_command: # pane no. 1
+          - tig
+      - shell_command: # pane no. 1
+          - git status
+  - window_name: flake.nix
+    layout: even-horizontal
+    panes:
+      - shell_command: # pane no. 1
+          - vim flake.nix
+      - null
+  - window_name: tmux-session.yml
+    layout: even-horizontal
+    panes:
+      - shell_command: # pane no. 1
+          - vim tmux-session.yml
+      - null
