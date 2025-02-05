@@ -44,6 +44,16 @@ const permalink = Astro.site.href;
       
       <section class="supporters">
         <h1><span class="emoji">🙌</span>Supporters</h1>
+        <ul class="supporters-list">
+          <li class="supporter">
+            <img src="/public/assets/logos/supporters/amsa_logo.svg" />
+            <div class="copy">
+              Canberra makerspace is a proud member of the 
+              <a href="https://mensshed.org/">Australian Men's Shed Association</a> 
+              as a community shed
+            </div>
+          </li>
+        </ul>
       </section>
       
 
@@ -51,8 +61,6 @@ const permalink = Astro.site.href;
         <h1><span class="emoji">📎</span>Links</h1>
         <ul>
           <li><a href="https://www.instagram.com/canberra.makerspace">Instagram</a></li>
-          <li><a href="https://www.facebook.com/groups/canberramakerspace">Facebook group</a></li>
-          <li><a href="https://discord.gg/FM68qMKm5G">Discord</a></li>
           <li><a href="https://github.com/makehackvoid/">GitHub</a></li>
         </ul>
       </section>
@@ -107,6 +115,18 @@ const permalink = Astro.site.href;
     .home-copy {
       flex: 0;
       padding-bottom: 2em;
+    }
+  }
+
+  ul.supporters-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .copy {
+      margin-top: 1em;
     }
   }
 </style>
