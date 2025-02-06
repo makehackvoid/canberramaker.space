@@ -4,22 +4,24 @@ const { current = '' } = Astro.props;
 
 <style>
   nav {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    gap: 4ch;
     font-family: var(--font-family-monospace);
     font-weight: 700;
     justify-content: center;
     text-transform: lowercase;
+    ul {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      gap: 3ch;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
   }
 
   a {
     color: inherit;
-    padding: 10px 5px;
-    display: block;
     position: relative;
-    min-width: 70px;
     text-align: left;
   }
 
@@ -29,8 +31,22 @@ const { current = '' } = Astro.props;
 </style>
 
 <nav>
-  <a class={current === "thespace" ? "selected" : ""} href="/thespace">🛠️ the space</a>
-  <a class={current === "membership" ? "selected" : ""} href="/membership">💡 get involved</a>
-  <a href="https://community.canberramaker.space/" target="_blank">🗩 forum</a>
-  <a href="https://www.instagram.com/canberra.makerspace" target="_blank">🗪  discord</a>
+  <ul>
+    <li>
+      <span>🛠️</span>
+      <a class={current === "thespace" ? "selected" : ""} href="/thespace">the space</a>
+    </li>
+    <li>
+      <span>💡</span>
+      <a class={current === "membership" ? "selected" : ""} href="/membership">get involved</a>
+    </li>
+    <li>
+      <span>🗩 </span>
+      <a href="https://community.canberramaker.space/" target="_blank">forum</a>
+    </li>
+    <li>
+      <span>📖</span>
+      <a href="https://docs.canberramaker.space/" target="_blank">docs</a>
+    </li>
+  </ul>
 </nav>
