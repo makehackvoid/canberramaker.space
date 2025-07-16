@@ -53,7 +53,7 @@ h6 {
   font-family: var(--font-family-monospace);
   text-transform: lowercase;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1;
   margin: 0 0 0.5em 0;
 }
 
@@ -63,8 +63,7 @@ h1 {
 }
 
 h2 {
-  margin: 1.6em 0 0 0;
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 
 h3 {
