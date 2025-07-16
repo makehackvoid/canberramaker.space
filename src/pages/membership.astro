@@ -8,24 +8,28 @@ const permalink = `${Astro.site.href}facilities`;
 
 <BaseLayout title={title} description={description} permalink={permalink} current="facilities">
   <div class="container">
-    <h1>Get involved!</h1>
-      <section class="payments">
-        <h1><span class="emoji">💸</span>Price</h1>
-        <p>
-          We request visitors to make a small donation of their choice when
-          they visit the space. You can also become a monthly paying member.
-          This helps us stay open and pay our bills.
-        </p>
-        <p>
-          You can pay at the door or use the payment links below.
-        </p>
-        <a target="_blank" href="https://square.link/u/PfmYcYaa">
-          Casual visit donation
-        </a>
-        <a target="_blank" href="https://square.link/u/XX0WC6Q6">
-          Monthly membership
-        </a>
-      </section>
+    <section class="payments">
+      <h1><span class="emoji">💡 </span>Get involved</h1>
+      <p>
+        We request visitors to make a small donation of their choice when
+        they visit the space. You can also become a monthly paying member.
+        This helps us stay open and pay our bills.
+      </p>
+      <p>
+        You can pay at the door or use the payment links below.
+      </p>
+      <ul>
+        <li>
+          <a target="_blank" href="https://square.link/u/PfmYcYaa">
+            Casual visit donation
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://square.link/u/XX0WC6Q6">
+            Monthly membership
+          </a>
+        </li>
+    </section>
   </div>
 </BaseLayout>
 
