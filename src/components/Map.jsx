@@ -11,14 +11,21 @@ export default (props) => {
     zoom: 15,
   });
 
+  const [config, setConfig] = createSignal({});
+
+  onMount(() => {
+    setConfig({
+      style: "mapbox://styles/mapbox/outdoors-v11",
+      scrollZoom: props.scrollZoom,
+      accessToken:
+        "pk.eyJ1IjoiamFtZXN3aWxtb3QiLCJhIjoiY2x5ZTQ1MnpiMGRoNjJrcHYxZzB3MjM5MCJ9.WEI3PEtucKnNpV-kZtnqgw",
+    });
+  });
+
   return (
     <>
       <MapGL
-        options={{
-          style: "mapbox://styles/mapbox/outdoors-v11",
-          accessToken:
-            "pk.eyJ1IjoiamFtZXN3aWxtb3QiLCJhIjoiY2x5ZTQ1MnpiMGRoNjJrcHYxZzB3MjM5MCJ9.WEI3PEtucKnNpV-kZtnqgw",
-        }}
+        options={config()}
         viewport={viewport()}
         onViewportChange={(evt) => setViewport(evt)}
       >
