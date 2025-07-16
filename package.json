@@ -7,7 +7,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "lint-staged"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
@@ -32,6 +33,7 @@
   "devDependencies": {
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
-    "prettier": "3.4.2"
+    "prettier": "3.4.2",
+    "wrangler": "^4.24.3"
   }
 }
