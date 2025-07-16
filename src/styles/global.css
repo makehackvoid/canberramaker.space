@@ -102,12 +102,10 @@ li p {
   margin-top: 0.5rem;
 }
 
-/*
 a {
   color: inherit;
   transition: color linear 0.15s;
 }
-*/
 
 a:hover {
   color: var(--primary-color);

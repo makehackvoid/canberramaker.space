@@ -33,6 +33,10 @@ const { current = '' } = Astro.props;
 <nav>
   <ul>
     <li>
+      <span>🏠</span>
+      <a class={current === "/" ? "selected" : ""} href="/">home</a>
+    </li>
+    <li>
       <span>🛠️</span>
       <a class={current === "thespace" ? "selected" : ""} href="/thespace">the space</a>
     </li>
@@ -40,6 +44,7 @@ const { current = '' } = Astro.props;
       <span>💡</span>
       <a class={current === "membership" ? "selected" : ""} href="/membership">get involved</a>
     </li>
+    <!--
     <li>
       <span>🗩 </span>
       <a href="https://community.canberramaker.space/" target="_blank">forum</a>
@@ -48,5 +53,6 @@ const { current = '' } = Astro.props;
       <span>📖</span>
       <a href="https://docs.canberramaker.space/" target="_blank">docs</a>
     </li>
+    -->
   </ul>
 </nav>
