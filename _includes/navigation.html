@@ -1,9 +1,0 @@
-<nav>
-  <ul>
-  {% for item in site.data.navigation %}
-    <li {% if page.url == item.link %}class="selected"{% endif %}>
-      <a href="{{ item.link }}"><i class="fas fa-{{ item.icon }}"></i> <span class="text">{{ item.name }}</span></a>
-    </li>
-  {% endfor %}
-  </ul>
-</nav>

@@ -1,0 +1,23 @@
+---
+import Brand from './Brand.astro'
+import Nav from './Nav.astro'
+
+const { current = '' } = Astro.props;
+---
+
+<style>
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+  }
+</style>
+
+<header>
+  <Brand />
+  <Nav current={current} />
+</header>

@@ -1,0 +1,21 @@
+<picture class="logo-container">
+  <source srcset="/assets/logos/icons_white.svg" media="(prefers-color-scheme:dark)">
+  <source srcset="/assets/logos/icons_black.svg" media="(prefers-color-scheme:light)">
+  <img src="/assets/logos/icons_black.svg">
+</picture>
+
+<style>
+  .logo-container {
+    img {
+      height: 3rem;
+      // height: 100%;
+      width: auto;
+    }
+  }
+  
+  @media screen and (max-width: 520px) {
+    img {
+      display: none;
+    }
+  }
+</style>

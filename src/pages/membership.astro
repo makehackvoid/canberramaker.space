@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Get Involved | Canberra Makerspace';
+const description = 'List of facilities at Canberra Makerspace';
+const permalink = `${Astro.site.href}facilities`;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} current="facilities">
+  <div class="container">
+    <section class="payments">
+      <h1><span class="emoji">💡 </span>Get involved</h1>
+      <p>
+        We request visitors to make a small donation of their choice when
+        they visit the space. You can also become a monthly paying member.
+        This helps us stay open and pay our bills.
+      </p>
+      <p>
+        You can pay at the door or use the payment links below.
+      </p>
+      <ul>
+        <li>
+          <a target="_blank" href="https://square.link/u/PfmYcYaa">
+            Casual visit donation
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://square.link/u/XX0WC6Q6">
+            Monthly membership
+          </a>
+        </li>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+</style>

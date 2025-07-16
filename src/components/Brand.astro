@@ -1,0 +1,40 @@
+---
+import Logo from './Logo.astro'
+---
+
+<style>
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 2ch;
+    
+    a {
+      text-decoration: none;
+      box-shadow: none;
+    }
+  }
+
+  h1 {
+    // font-variation-settings: "opsz" 32;
+    font-family: var(--font-family-brand);
+    margin: 0;
+    font-size: 3em;
+    text-transform: lowercase;
+  }
+
+  .byline {
+    font-family: var(--font-family-mhv);
+    font-size: 1.5em;
+    font-weight: 350;
+  }
+</style>
+
+<div class="brand">
+  <a href="/">
+    <Logo />
+  </a>
+  <div>
+    <h1>Canberra Makerspace</h1>
+    <span class="byline">> make hack void</span>
+  </div>
+</div>

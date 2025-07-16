@@ -1,0 +1,58 @@
+---
+const { current = '' } = Astro.props;
+---
+
+<style>
+  nav {
+    font-family: var(--font-family-monospace);
+    font-weight: 700;
+    justify-content: center;
+    text-transform: lowercase;
+    ul {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      gap: 3ch;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  a {
+    color: inherit;
+    position: relative;
+    text-align: left;
+  }
+
+  a:not(.selected) {
+    opacity: 0.87;
+  }
+</style>
+
+<nav>
+  <ul>
+    <li>
+      <span>🏠</span>
+      <a class={current === "/" ? "selected" : ""} href="/">home</a>
+    </li>
+    <li>
+      <span>🛠️</span>
+      <a class={current === "thespace" ? "selected" : ""} href="/thespace">the space</a>
+    </li>
+    <li>
+      <span>💡</span>
+      <a class={current === "membership" ? "selected" : ""} href="/membership">get involved</a>
+    </li>
+    <!--
+    <li>
+      <span>🗩 </span>
+      <a href="https://community.canberramaker.space/" target="_blank">forum</a>
+    </li>
+    <li>
+      <span>📖</span>
+      <a href="https://docs.canberramaker.space/" target="_blank">docs</a>
+    </li>
+    -->
+  </ul>
+</nav>
