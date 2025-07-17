@@ -18,7 +18,7 @@ export default (props) => {
       style: "mapbox://styles/mapbox/outdoors-v11",
       scrollZoom: props.scrollZoom,
       accessToken:
-        "pk.eyJ1IjoiamFtZXN3aWxtb3QiLCJhIjoiY2x5ZTQ1MnpiMGRoNjJrcHYxZzB3MjM5MCJ9.WEI3PEtucKnNpV-kZtnqgw",
+        "pk.eyJ1IjoiY2FuYmVycmFtYWtlcnNwYWNlIiwiYSI6ImNseWZseWFzODAwdTkybXEwODBkYmJuczQifQ.2nQtiwY29DgMP6aZvEhisA",
     });
   });
 
