@@ -3,7 +3,7 @@ windows:
   - window_name: utils
     layout: even-horizontal
     panes:
-      - yarn start
+      - npm run dev
       - null
   - window_name: git
     layout: even-horizontal
