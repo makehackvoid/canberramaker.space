@@ -1,19 +1,68 @@
 <footer>
-  <span>
+  <div class="content">
+    <div class="supporters">
+      <h1><span class="emoji">🙌</span>Supporters</h1>
+      <ul class="supporters-list">
+        <li class="supporter">
+          <img src="/assets/logos/supporters/amsa_light.svg" />
+          <div class="copy">
+            Canberra makerspace is a proud member of the 
+            <a href="https://mensshed.org/">Australian Men's Shed Association</a> 
+            as a community shed
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="links">
+        <h1><span class="emoji">📎</span>Links</h1>
+        <ul>
+          <li>
+            <a href="https://github.com/makehackvoid/">github/makehackvoid</a>
+          </li>
+          <li><a href="https://hackerspace.au/@MakeHackVoid">@MakeHackVoid@hackerspace.au</a></li>
+        </ul>
+    </div>
+  </div>
+  <div class="small-text">
     &copy; {new Date().getFullYear()} Make Hack Void.
     Powered by <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>.
     Based on a template by <a href="https://www.twitter.com/Charca" target="_blank" rel="noopener">Maxi Ferreira</a>.
-  </span>
+  </div>
 </footer>
 
 <style>
   footer {
-    color: var(--text-secondary);
-    font-size: .8em;
-    margin: 1em auto;
-    max-width: 1400px;
     padding: 1em 2em;
-    text-align: center;
     width: 100%;
+    border-top: 1px solid gray;
+  }
+
+  h1 {
+    font-size: 1.15em;
+  }
+
+  .content {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .small-text {
+    margin-top: 3em;
+    font-size: .8em;
+    text-align: center;
+    color: var(--text-secondary);
+  }
+
+  ul.supporters-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .copy {
+      margin-top: 1em;
+    }
   }
 </style>

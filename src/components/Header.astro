@@ -8,16 +8,20 @@ const { current = '' } = Astro.props;
 <style>
   header {
     display: flex;
-    flex-direction: column;
     gap: 1em;
     margin: 0 auto;
     align-items: center;
-    max-width: 800px;
     width: 100%;
+  }
+
+  .navigation {
+    margin-left: auto;
   }
 </style>
 
 <header>
   <Brand />
-  <Nav current={current} />
+  <div class="navigation">
+    <Nav current={current} />
+  </div>
 </header>

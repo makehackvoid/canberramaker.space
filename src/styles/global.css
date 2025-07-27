@@ -3,11 +3,17 @@
   --text-main: #36393b;
   --text-secondary: #6b6f72;
   --primary-color: #548e9b;
+
   --font-family-sans: "Inter", sans-serif;
   --font-family-monospace: "JetBrains Mono", sans-serif;
   --font-family-brand: "Averia Sans Libre Bold", sans-serif;
   --font-family-brand-light: "Averia Sans Libre Light", sans-serif;
   --font-family-mhv: "JetBrains Mono", sans-serif;
+
+  --header-height: 4.5rem;
+  --anchor-offset: -4.5rem;
+
+  --page-gutter: 2ch;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,6 +42,13 @@ html {
   box-sizing: border-box;
 }
 
+a.anchor {
+  display: block;
+  position: relative;
+  top: var(--anchor-offset);
+  visibility: hidden;
+}
+
 body {
   margin: 0;
   font-family: var(--font-family-sans);
@@ -59,7 +72,7 @@ h6 {
 
 h1 {
   font-size: 2em;
-  margin: 0 0 1em 0;
+  margin: 1em 0;
 }
 
 h2 {

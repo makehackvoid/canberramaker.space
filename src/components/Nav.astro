@@ -28,21 +28,22 @@ const { current = '' } = Astro.props;
   a:not(.selected) {
     opacity: 0.87;
   }
+
+  .icon {
+    margin-right: 0.5ch;
+  }
 </style>
 
 <nav>
   <ul>
     <li>
-      <span>🏠</span>
-      <a class={current === "/" ? "selected" : ""} href="/">home</a>
+      <span class="icon">🏠</span><a class={current === "/" ? "selected" : ""} href="/">home</a>
     </li>
     <li>
-      <span>🛠️</span>
-      <a class={current === "thespace" ? "selected" : ""} href="/thespace">the space</a>
+      <span class="icon">🛠️</span><a class={current === "thespace" ? "selected" : ""} href="/thespace">the space</a>
     </li>
     <li>
-      <span>💡</span>
-      <a class={current === "membership" ? "selected" : ""} href="/membership">get involved</a>
+      <span class="icon">💡</span><a class={current === "membership" ? "selected" : ""} href="/membership">get involved</a>
     </li>
     <!--
     <li>

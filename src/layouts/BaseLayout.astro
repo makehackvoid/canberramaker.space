@@ -39,18 +39,28 @@ const { title, description, permalink, current } = Astro.props;
   }
 
   .header-container {
-    margin-top: 2em;
+    padding: 0 var(--page-gutter);
+    height: var(--header-height);
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid gray;
   }
 
   main {
-    flex: 1;
     position: relative;
+    padding: var(--header-height) var(--page-gutter) 0px var(--page-gutter);
+    /*
+    flex: 1;
+    flex-direction: column;
     margin: 0 auto;
     max-width: 75ch;
     padding: 1em 2em;
     box-sizing: border-box;
+    */
     width: 100%;
-    display: flex;
-    flex-direction: column;
   }
 </style>
