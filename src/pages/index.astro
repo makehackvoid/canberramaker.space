@@ -12,40 +12,86 @@ const permalink = Astro.site.href;
   <div class="home-container">
     <div class="home-copy">
       <section class="banner">
-        <video controls autoplay muted>
-          <source src="/assets/videos/banner-extended2.mp4" type="video/mp4">
-        </video>
+        <div class="blurb">
+          <h1><span class="emoji">👋</span>hi!</h1>
+          <p>
+            Welcome to Canberra Makerspace!
+          </p>
+          <p>
+            We're a community-driven workshop for people from
+            all walks of life to meet and collaborate. We provide a space for
+            makers and aspiring makers to bring their ideas to life with access to
+            tools, resources, and a supportive community.
+          </p>
+            Find out <a href="#whats_on">what's on</a>, learn more about 
+            <a href="/thespace">the space</a>, where to 
+            <a href="#location">visit us</a> and how to 
+            <a href="/membership">get involved.</a>
+          <p>
+          </p>
+          </div>
+        <div class="main">
+          <video controls autoplay muted loop>
+            <source 
+              src="/assets/videos/banner-extended2.mp4" 
+              type="video/mp4">
+          </video>
+        </div>
       </section>
       <section class="blurb">
-        <h1><span class="emoji">👋</span>hi!</h1>
-        <p>
-          Welcome to Canberra Makerspace!
-        </p>
-        <p>
-          We're a community-driven workshop for people from
-          all walks of life to meet and collaborate. We provide a space for
-          makers and aspiring makers to bring their ideas to life with access to
-          tools, resources, and a supportive community.
-        </p>
       </section>
 
 
       <section class="calendar">
-        <h1><span class="emoji">🗓️</span>what's on</h1>
-        <object 
-          data="https://calendar.google.com/calendar/embed?src=canberramakerspace%40gmail.com&amp;ctz=Australia%2FSydney" 
-          style="border: 0; border-radius: 15px;" 
-          width="100%" 
-          height="400" 
-          frameborder="0" 
-          scrolling="no">
-        </object>
+        <div class="copy">
+          <a class="anchor" id="whats_on"></a>
+          <h1><span class="emoji">🗓️</span>what's on</h1>
+          <h2>Electronics Wednesday</h2>
+          <p>
+            Every Wednesday from 6:30pm to 9pm-ish
+          </p>
+          <p>
+          Activities:
+          </p>
+          <ul>
+            <li>Electronics hacking</li>
+            <li>Arduino</li>
+            <li>Raspberry Pi</li>
+            <li>3D printing</li>
+            <li>Linux</li>
+            <li>8-bit computing</li>
+          </ul>
+          <h2>Maker Sunday</h2>
+          <p>
+            Every Sunday from 1pm to 4pm-ish
+          </p>
+          <p>
+          Activities:
+          </p>
+          <ul>
+            <li>Woodwork</li>
+            <li>Metalwork</li>
+            <li>Working on cars & vans</li>
+            <li>General making</li>
+          </ul>
+        </div>
+        <div class="calendar-pane">
+          <object 
+            data="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Australia%2FSydney&showPrint=0&mode=AGENDA&showNav=0&showTabs=0&showCalendars=0&showDate=0&src=Y2FuYmVycmFtYWtlcnNwYWNlQGdtYWlsLmNvbQ&color=%233f51b5" 
+            style="border: 0;" 
+            width="100%" 
+            height="100%" 
+            frameborder="0" 
+            scrolling="no">
+          </object>
+        </div>
       </section>
 
       <section class="location">
-        <h1><span class="emoji">🌏</span>Where to find us</h1>
+        <a class="anchor" id="location"></a>
         <div class="location-container">
           <div class="copy">
+            <h1><span class="emoji">🌏</span>Where to find us</h1>
             <h2>The space's address:</h2>
             <address>
               17 Tucana Street <br />
@@ -55,13 +101,18 @@ const permalink = Astro.site.href;
            
             <ul>
               <li>
-            <a href="https://maps.app.goo.gl/tDpBBhgvBFtPK6eVA">
-              Google maps
-            </a>
-              </li>
-              <li>
             <a href="https://osm.org/go/uNlUbAhob">
               OpenStreetMap
+            </a>
+              </li>
+            <li>
+              <a href="https://what3words.com/ticked.sharpen.nervous">
+                ///ticked.sharpen.nervous
+              </a>
+              </li>
+              <li>
+            <a href="https://maps.app.goo.gl/tDpBBhgvBFtPK6eVA">
+              Google maps
             </a>
               </li>
             </ul>
@@ -71,29 +122,7 @@ const permalink = Astro.site.href;
           </div>
         </div>
       </section>
-      
-      <section class="supporters">
-        <h1><span class="emoji">🙌</span>Supporters</h1>
-        <ul class="supporters-list">
-          <li class="supporter">
-            <img src="/assets/logos/supporters/amsa_light.svg" />
-            <div class="copy">
-              Canberra makerspace is a proud member of the 
-              <a href="https://mensshed.org/">Australian Men's Shed Association</a> 
-              as a community shed
-            </div>
-          </li>
-        </ul>
-      </section>
-      
 
-      <section class="links">
-        <h1><span class="emoji">📎</span>Links</h1>
-        <ul>
-          <li><a href="https://www.instagram.com/canberra.makerspace">Instagram</a></li>
-          <li><a href="https://github.com/makehackvoid/">GitHub</a></li>
-        </ul>
-      </section>
     </div>
   </div>
 </BaseLayout>
@@ -104,13 +133,14 @@ const permalink = Astro.site.href;
     display: flex;
     flex: 1;
     justify-content: center;
-    margin-bottom: 2em;
     min-height: 400px;
+    gap: 2ch;
   }
 
   video {
     width: 100%;
-    border-radius: 15px;
+    height: 100%;
+    object-fit: cover;
   }
 
   .home-copy {
@@ -120,7 +150,7 @@ const permalink = Astro.site.href;
 
   .home-copy h1 {
     font-weight: 700;
-    margin-bottom: 0.5em;
+    margin: 0.5em 0;
     line-height: 1.3;
   }
   
@@ -128,15 +158,51 @@ const permalink = Astro.site.href;
     margin-right: 0.5ch;
   }
   
-  section {
-    margin: 2em 0;
+  section:not(:last-child) {
+    // margin: 2em 0;
+    border-bottom: 1px dashed grey;
+  }
+
+  section.banner {
+    // height: calc(100vh - 2 * var(--header-height));
+    height: 70vh;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 2fr minmax(0, 3fr);
+    gap: 2ch;
+  }
+
+  section.calendar {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 2fr minmax(0, 3fr);
+    gap: 2ch;
+  }
+
+  p~ul {
+    margin-top: 0;
+  }
+
+  p:has(+ ul) {
+    margin-bottom: 0.5em;
+  }
+
+  .calendar-pane {
+    pointer-events: none;
+  }
+  
+  section.location .location-container {
+    gap: 2ch;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 2fr minmax(0, 3fr);
   }
 
   .map-container {
     position: relative;
     height: 500px;
     width: auto;
-    border-radius: 15px;
+    // border-radius: 15px;
     overflow: hidden;
   }
 
@@ -154,17 +220,5 @@ const permalink = Astro.site.href;
   .location-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
-  }
-
-  ul.supporters-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-top: 2em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    .copy {
-      margin-top: 1em;
-    }
   }
 </style>
