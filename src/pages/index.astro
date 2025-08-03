@@ -23,11 +23,11 @@ const permalink = Astro.site.href;
             makers and aspiring makers to bring their ideas to life with access to
             tools, resources, and a supportive community.
           </p>
+          <p>
             Find out <a href="#whats_on">what's on</a>, learn more about 
             <a href="/thespace">the space</a>, where to 
             <a href="#location">visit us</a> and how to 
             <a href="/membership">get involved.</a>
-          <p>
           </p>
           </div>
         <div class="main">
@@ -88,38 +88,36 @@ const permalink = Astro.site.href;
       </section>
 
       <section class="location">
-        <a class="anchor" id="location"></a>
-        <div class="location-container">
-          <div class="copy">
-            <h1><span class="emoji">🌏</span>Where to find us</h1>
-            <h2>The space's address:</h2>
-            <address>
-              17 Tucana Street <br />
-              Giralang ACT 2617 <br />
-              Canberra
-            </address>
-           
-            <ul>
-              <li>
-            <a href="https://osm.org/go/uNlUbAhob">
-              OpenStreetMap
-            </a>
-              </li>
+        <div class="copy">
+          <a class="anchor" id="location"></a>
+          <h1><span class="emoji">🌏</span>Where to find us</h1>
+          <h2>The space's address:</h2>
+          <address>
+            17 Tucana Street <br />
+            Giralang ACT 2617 <br />
+            Canberra
+          </address>
+         
+          <ul>
             <li>
-              <a href="https://what3words.com/ticked.sharpen.nervous">
-                ///ticked.sharpen.nervous
-              </a>
-              </li>
-              <li>
-            <a href="https://maps.app.goo.gl/tDpBBhgvBFtPK6eVA">
-              Google maps
+          <a href="https://osm.org/go/uNlUbAhob">
+            OpenStreetMap
+          </a>
+            </li>
+          <li>
+            <a href="https://what3words.com/ticked.sharpen.nervous">
+              ///ticked.sharpen.nervous
             </a>
-              </li>
-            </ul>
-          </div>
-          <div class="map-container">
-            <Map client:load />
-          </div>
+            </li>
+            <li>
+          <a href="https://maps.app.goo.gl/tDpBBhgvBFtPK6eVA">
+            Google maps
+          </a>
+            </li>
+          </ul>
+        </div>
+        <div class="map-container">
+          <Map client:load />
         </div>
       </section>
 
@@ -164,19 +162,38 @@ const permalink = Astro.site.href;
   }
 
   section.banner {
-    // height: calc(100vh - 2 * var(--header-height));
     height: 70vh;
+  }
+  
+  section.location, section.calendar, section.banner {
+    gap: 2ch;
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 2fr minmax(0, 3fr);
-    gap: 2ch;
   }
 
-  section.calendar {
-    display: grid;
-    grid-template-rows: 100%;
-    grid-template-columns: 2fr minmax(0, 3fr);
-    gap: 2ch;
+  @media (max-width: 800px) {
+    section.location, section.calendar, section.banner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 650px) {
+    section.location, section.calendar, section.banner {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 70vh;
+      border-bottom: none;
+    }
+
+    section.banner {
+      height: auto;
+    }
+
+    section.banner video, 
+    section.calendar .calendar-pane,
+    section.location .map-container {
+      width: calc(100% + 4ch);
+      margin-left: -2ch;
+    }
   }
 
   p~ul {
@@ -190,13 +207,6 @@ const permalink = Astro.site.href;
   .calendar-pane {
     pointer-events: none;
   }
-  
-  section.location .location-container {
-    gap: 2ch;
-    display: grid;
-    grid-template-rows: 100%;
-    grid-template-columns: 2fr minmax(0, 3fr);
-  }
 
   .map-container {
     position: relative;
@@ -206,19 +216,4 @@ const permalink = Astro.site.href;
     overflow: hidden;
   }
 
-  @media (max-width: 800px) {
-    .home-container {
-      flex-direction: column;
-    }
-
-    .home-copy {
-      flex: 0;
-      padding-bottom: 2em;
-    }
-  }
-
-  .location-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
 </style>
