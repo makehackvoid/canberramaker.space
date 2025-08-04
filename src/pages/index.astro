@@ -180,12 +180,16 @@ const permalink = Astro.site.href;
   @media (max-width: 650px) {
     section.location, section.calendar, section.banner {
       grid-template-columns: 1fr;
-      grid-template-rows: auto 70vh;
       border-bottom: none;
     }
 
     section.banner {
       height: auto;
+      grid-template-rows: auto 70vh;
+    }
+    
+    section.location, section.calendar {
+      grid-template-rows: auto 50vh;
     }
 
     section.banner video, 
@@ -210,7 +214,6 @@ const permalink = Astro.site.href;
 
   .map-container {
     position: relative;
-    height: 500px;
     width: auto;
     // border-radius: 15px;
     overflow: hidden;
