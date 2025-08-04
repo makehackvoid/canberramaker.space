@@ -25,6 +25,13 @@
   }
 }
 
+@media (max-width: 800px) {
+  :root {
+    --header-height: 6rem;
+    --anchor-offset: -6rem;
+  }
+}
+
 html {
   overflow-y: scroll;
 }
