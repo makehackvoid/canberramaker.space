@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 import Map from '../components/Map';
+import Calendar from '../components/Calendar';
 
 const title = 'Canberra Makerspace';
 const description = 'Canberra\'s community makerspace.';
@@ -76,14 +77,7 @@ const permalink = Astro.site.href;
           </ul>
         </div>
         <div class="calendar-pane">
-          <object 
-            data="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Australia%2FSydney&showPrint=0&mode=AGENDA&showNav=0&showTabs=0&showCalendars=0&showDate=0&src=Y2FuYmVycmFtYWtlcnNwYWNlQGdtYWlsLmNvbQ&color=%233f51b5" 
-            style="border: 0;" 
-            width="100%" 
-            height="100%" 
-            frameborder="0" 
-            scrolling="no">
-          </object>
+          <Calendar client:load client:only="solid-js" />
         </div>
       </section>
 
