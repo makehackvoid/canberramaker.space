@@ -21,7 +21,8 @@
           pkgs.nodejs_22
           pkgs.nodePackages.typescript
           # pkgs.nodePackages.typescript-language-server
-
+          pkgs.python313
+          pkgs.python313Packages.icalendar
           # dependencies for grip markdown viewer
         ];
 
