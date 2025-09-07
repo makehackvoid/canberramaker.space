@@ -124,16 +124,33 @@ export default (props) => {
             <button onClick={[prevHandler]}>Previous</button>
             <button onClick={[nextHandler]}>Next</button>
 
-            <select value={view()} onInput={viewHandler}>
-              <option value="month">Month</option>
-              <option value="two-weeks">Two weeks</option>
-              <option value="week">Week</option>
-              <option value="day">Day</option>
-            </select>
+            <label>
+              View:
+              <select value={view()} onInput={viewHandler}>
+                <option value="month">Month</option>
+                <option value="two-weeks">Two weeks</option>
+                <option value="week">Week</option>
+                <option value="day">Day</option>
+              </select>
+            </label>
           </div>
         </div>
         <div class="calendar-pane">
           <div ref={calendarDom} style="height:100%;"></div>
+        </div>
+        <div class="calendar-feeds">
+          <span class="mvh">
+            📅
+            <a href="/calendars/public-holiday-ical-feed.ics">
+              MHV Calendar (iCalendar feed)
+            </a>
+          </span>
+          <span class="canberra">
+            📅
+            <a href="/calendars/public-holiday-ical-feed.ics">
+              ACT Public Holidays (iCalendar feed)
+            </a>
+          </span>
         </div>
       </div>
     </>

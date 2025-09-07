@@ -22,3 +22,11 @@
 .controls {
   margin-left: auto;
 }
+
+.calendar-feeds {
+  margin: 1em 0;
+  display: flex;
+}
+.calendar-feeds .canberra {
+  margin-left: auto;
+}
