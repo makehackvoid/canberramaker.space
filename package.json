@@ -21,6 +21,7 @@
     "@toast-ui/calendar": "^2.1.3",
     "astro": "^4.0.1",
     "dayjs": "^1.11.13",
+    "ical.js": "^2.2.1",
     "mapbox-gl": "^3.5.1",
     "moment": "^2.30.1",
     "powerglitch": "^2.3.3",
@@ -32,7 +33,8 @@
     "solid-map-gl": "^1.11.3",
     "solid-styled-jsx": "^0.27.1",
     "svelte": "^4.2.17",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "husky": "^9.1.7",

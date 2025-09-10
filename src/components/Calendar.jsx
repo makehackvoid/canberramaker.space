@@ -2,13 +2,21 @@ import { createSignal, createMemo, onMount } from "solid-js";
 
 import { createStore } from "solid-js/store";
 
+import ICAL from "ical.js";
+
 import dayjs from "dayjs";
 import advancedFormat from "dayjs/plugin/advancedFormat";
 
 import Calendar from "@toast-ui/calendar";
 import "@toast-ui/calendar/dist/toastui-calendar.min.css";
 
+import { v4 as uuidv4 } from "uuid";
 import "./Calendar.css";
+
+import pubHolsURL from "/calendars/act.ics?url";
+import mhvCalendarURL from "/calendars/mhv.ics?url";
+
+// https://schedule-x.dev/docs/calendar
 
 export default (props) => {
   let calendarDom;
@@ -22,7 +30,7 @@ export default (props) => {
     if (dateRange.start) {
       let startDate = dayjs(calendar.renderRange.start.d);
       let endDate = dayjs(calendar.renderRange.end.d);
-      if (view() == "month") {
+      if (view() == "month" || view() == "week") {
         let diffDays = endDate.diff(startDate, "days");
         let middleDiff = Math.floor(diffDays / 2);
 
@@ -76,18 +84,92 @@ export default (props) => {
     setDateRange(calendar.renderRange);
   };
 
-  onMount(() => {
+  async function streamToString(stream) {
+    const reader = stream.getReader();
+    const textDecoder = new TextDecoder();
+    let result = "";
+
+    async function read() {
+      const { done, value } = await reader.read();
+
+      if (done) {
+        return result;
+      }
+
+      result += textDecoder.decode(value, { stream: true });
+      return read();
+    }
+
+    return read();
+  }
+
+  async function generateEvents(url, calId, isAllday = false) {
+    const response = await fetch(url);
+    if (response.ok) {
+      const strCalendar = await streamToString(response.body);
+      const jcal = ICAL.parse(strCalendar);
+
+      const events = parseVEvents(jcal);
+
+      for (const i in events) {
+        events[i]["id"] = uuidv4();
+        events[i]["start"] = events[i]["dtstart"];
+        events[i]["end"] = events[i]["dtend"];
+        if (isAllday) {
+          events[i]["isAllday"] = true;
+          events[i]["end"] = events[i]["start"];
+        }
+        events[i]["calendarId"] = calId;
+        events[i]["title"] = events[i]["summary"];
+      }
+
+      return events;
+    }
+  }
+
+  function parseVEvents(jcal) {
+    let events = [];
+    for (const i in jcal) {
+      if (jcal[i] instanceof Array) {
+        for (const j in jcal[i]) {
+          console.log(jcal[i][j][0]);
+          if (jcal[i][j][0] == "vevent") {
+            let event = {};
+            for (const k in jcal[i][j][1]) {
+              let vEvent = jcal[i][j][1][k];
+              event[vEvent[0]] = vEvent[3];
+            }
+            events.push(event);
+          }
+        }
+      }
+    }
+    return events;
+  }
+
+  onMount(async () => {
+    const pubHolsEvents = await generateEvents(pubHolsURL, "pubHols", true);
+    const mhvEvents = await generateEvents(mhvCalendarURL, "mhv");
+
+    console.log("mvh", mhvEvents);
+
     dayjs.extend(advancedFormat);
     calendar = new Calendar(calendarDom, {
-      defaultView: "month",
+      defaultView: view(),
       template: {
         time(event) {
           const { start, end, title } = event;
-
-          return `<span style="color: white;">${formatTime(start)}~${formatTime(end)} ${title}</span>`;
+          if (event.isAllday) {
+            return `<span>${title}</span>`;
+          } else {
+            return `
+              <span>${title}</span>
+            `;
+          }
+          console.log("time", event);
         },
         allday(event) {
-          return `<span style="color: gray;">${event.title}</span>`;
+          return `<span>${title}</span>`;
         },
       },
       week: {
@@ -95,17 +177,21 @@ export default (props) => {
       },
       calendars: [
         {
-          id: "cal1",
-          name: "Personal",
+          id: "mhv",
+          name: "MHV",
           backgroundColor: "#03bd9e",
         },
         {
-          id: "cal2",
+          id: "pubHols",
           name: "ACT Public Holidays",
           backgroundColor: "#00a9ff",
         },
       ],
     });
+
+    calendar.createEvents(pubHolsEvents);
+    calendar.createEvents(mhvEvents);
+
     setDateRange(calendar.renderRange);
 
     let startDate = dayjs(calendar.renderRange.start.d);
@@ -122,8 +208,6 @@ export default (props) => {
           <div class="controls">
             <button onClick={[todayHandler]}>Today</button>
             <button onClick={[prevHandler]}>Previous</button>
-            <button onClick={[nextHandler]}>Next</button>
-
             <label>
               View:
               <select value={view()} onInput={viewHandler}>
@@ -133,6 +217,7 @@ export default (props) => {
                 <option value="day">Day</option>
               </select>
             </label>
+            <button onClick={[nextHandler]}>Next</button>
           </div>
         </div>
         <div class="calendar-pane">
@@ -141,13 +226,11 @@ export default (props) => {
         <div class="calendar-feeds">
           <span class="mvh">
             📅
-            <a href="/calendars/public-holiday-ical-feed.ics">
-              MHV Calendar (iCalendar feed)
-            </a>
+            <a href="/calendars/mhv.ics">MHV Calendar (iCalendar feed)</a>
           </span>
           <span class="canberra">
             📅
-            <a href="/calendars/public-holiday-ical-feed.ics">
+            <a href="/calendars/act.ics">
               ACT Public Holidays (iCalendar feed)
             </a>
           </span>

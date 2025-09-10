@@ -21,6 +21,8 @@
 
 .controls {
   margin-left: auto;
+  display: flex;
+  gap: 0.5ch;
 }
 
 .calendar-feeds {
