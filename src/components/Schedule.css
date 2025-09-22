@@ -1,0 +1,18 @@
+.schedule-display.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.schedule-display .calendar-pane {
+  flex: 1;
+}
+
+.calendar-feeds {
+  margin: 1em 0;
+  display: flex;
+}
+
+.calendar-feeds .canberra {
+  margin-left: auto;
+}

@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import Map from '../components/Map';
 import Calendar from '../components/Calendar';
+import Schedule from '../components/Schedule';
 
 const title = 'Canberra Makerspace';
 const description = 'Canberra\'s community makerspace.';
@@ -77,7 +78,7 @@ const permalink = Astro.site.href;
           </ul>
         </div>
         <div class="calendar-pane">
-          <Calendar client:load client:only="solid-js" />
+          <Schedule client:load client:only="solid-js" />
         </div>
       </section>
 

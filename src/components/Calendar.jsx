@@ -16,6 +16,10 @@ import "./Calendar.css";
 import pubHolsURL from "/calendars/act.ics?url";
 import mhvCalendarURL from "/calendars/mhv.ics?url";
 
+import { createCalendar, createViewMonthGrid } from "@schedule-x/calendar";
+import "@schedule-x/theme-default/dist/index.css";
+import "temporal-polyfill/global";
+
 // https://schedule-x.dev/docs/calendar
 
 export default (props) => {
