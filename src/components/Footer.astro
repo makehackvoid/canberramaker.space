@@ -4,7 +4,8 @@
       <h1><span class="emoji">🙌</span>Supporters</h1>
       <ul class="supporters-list">
         <li class="supporter">
-          <img src="/assets/logos/supporters/amsa_light.svg" />
+          <img class="light" src="/assets/logos/supporters/amsa_light.svg" />
+          <img class="dark" src="/assets/logos/supporters/amsa_dark.svg" />
           <div class="copy">
             Canberra makerspace is a proud member of the 
             <a href="https://mensshed.org/">Australian Men's Shed Association</a> 
@@ -72,6 +73,18 @@
     grid-template-columns: 1fr 1fr;
     .copy {
       margin-top: 1em;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    img.light {
+      display: none;
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    img.dark {
+      display: none;
     }
   }
 </style>
