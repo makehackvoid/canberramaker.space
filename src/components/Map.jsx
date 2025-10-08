@@ -13,9 +13,20 @@ export default (props) => {
 
   const [config, setConfig] = createSignal({});
 
+  const getPreferredScheme = () =>
+    window?.matchMedia?.("(prefers-color-scheme:dark)")?.matches
+      ? "dark"
+      : "light";
+
   onMount(() => {
+    let style = "mapbox://styles/mapbox/outdoors-v11";
+    if (getPreferredScheme() == "dark") {
+      style = "mapbox://styles/mapbox/navigation-night-v1";
+    }
+
+    console.log(style);
     setConfig({
-      style: "mapbox://styles/mapbox/outdoors-v11",
+      style: style,
       scrollZoom: props.scrollZoom,
       accessToken:
         "pk.eyJ1IjoiY2FuYmVycmFtYWtlcnNwYWNlIiwiYSI6ImNseWZseWFzODAwdTkybXEwODBkYmJuczQifQ.2nQtiwY29DgMP6aZvEhisA",
