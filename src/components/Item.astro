@@ -1,0 +1,28 @@
+---
+const { place, links = "[]", website } = Astro.props;
+
+let linksJson = JSON.parse(links);
+---
+
+<li>
+  <h3>{place}</h3>
+  <slot />
+	{
+  <ul>
+		{
+			linksJson.map((link) => (
+				<li>
+  				<a href={link.url}>{link.text}</a>
+				</li>
+			))
+		}
+  </ul>
+	}
+</li>
+
+<style>
+h3 {
+  font-size: 1.15em;
+  text-transform: none;
+}
+</style>

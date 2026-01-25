@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import Map from '../components/Map';
 
+import Item from '../components/Item.astro';
+
 const title = 'Canberra Makerspace';
 const description = 'Canberra\'s community makerspace.';
 const permalink = Astro.site.href;
@@ -29,6 +31,9 @@ const permalink = Astro.site.href;
             <a href="/thespace">the space</a>, where to 
             <a href="#location">visit us</a> and how to 
             <a href="/membership">get involved.</a>
+          </p>
+          <p>
+            Make, Hack, Void.
           </p>
           </div>
         <div class="main">
@@ -122,6 +127,70 @@ const permalink = Astro.site.href;
         </div>
       </section>
 
+      <section class="webring">
+        <div class="canberra">
+          <h1>cbr webring</h1>
+          <h2>makerspaces & workshops</h2>
+          <ul class="not-bulleted">
+            <Item 
+              place="ANU Makerspace" 
+              website="https://makerspace.anu.edu.au/"></Item>
+            <Item 
+              place="The Recyclery"
+              links=`[
+                {"text": "website", "url": "https://www.canberraenvironment.org/the-recyclery"},
+                {"text": "events", "url": "https://www.canberraenvironment.org/events?category=The%20Recyclery"}
+              ]`>
+              </Item>
+            <Item place="UC Workshop7"
+                  website="https://www.canberra.edu.au/future-students/study-at-uc/study-areas/design/workshop7"></Item>
+            <Item place="UNSW Canberra Makerspace"></Item>
+          </ul>
+          <h2>community & innovation</h2>
+          <ul class="not-bulleted">
+            <Item 
+              place="Canberra Environment Centre" 
+              links=`[
+                {"text": "website", "url": "https://www.canberraenvironment.org"},
+                {"text": "events", "url": "https://www.canberraenvironment.org/events"}
+              ]`>
+              Canberra Environment Centre is a not-for-profit, non-government, environmental education centre empowering people to create a more sustainable future for the Canberra community, by supporting lifelong behavioural change. 
+              </Item>
+            <Item 
+              place="Canberra Innovation Network" 
+              links=`[
+                {"text": "website", "url": "https://cbrin.com.au/"},
+                {"text": "events", "url": "https://cbrin.com.au/event/"}
+              ]`>
+						</Item>
+            <Item 
+              place="Community Toolbox Canberra" 
+              website="https://www.communitytoolboxcbr.org/"
+              links=`[
+                {"text": "website", "url": "https://www.communitytoolboxcbr.org"},
+                {"text": "events", "url": "https://www.communitytoolboxcbr.org/event-calendar"},
+                {"text": "inventory", "url": "https://communitytoolboxcbr.myturn.com/library/inventory/browse"}
+              ]`>
+              Community Toolbox Canberra is a community-led, volunteer-run tool and equipment library in Canberra, ACT, operating with the support of the local sustainability non-profit SEE Change. 
+              </Item>
+            <Item 
+              place="SEE Change" 
+              links=`[
+                {"text": "website", "url": "https://seechange.org.au/"},
+                {"text": "events", "url": "https://seechange.org.au/events"}
+              ]`>
+              SEE Change is a community-based, not-for-profit organisation that informs, inspires and supports sustainability in the Canberra region.
+              </Item>
+          </ul>
+        </div>
+        <div class="australia">
+          <h1>australia webring</h1>
+          <ul>
+          </ul>
+
+        </div>
+      </section>
+
     </div>
   </div>
 </BaseLayout>
@@ -164,6 +233,12 @@ const permalink = Astro.site.href;
 
   section.banner {
     height: 70vh;
+  }
+
+  section.webring {
+    display: grid;
+    gap: 2ch;
+    grid-template-columns: 1fr 1fr;
   }
   
   section.location, section.calendar, section.banner {
@@ -218,6 +293,10 @@ const permalink = Astro.site.href;
     width: auto;
     // border-radius: 15px;
     overflow: hidden;
+  }
+
+  ul.not-bulleted {
+    list-style-type: none;
   }
 
 </style>
