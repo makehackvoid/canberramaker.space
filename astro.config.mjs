@@ -9,7 +9,7 @@ import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-blog-template.netlify.app",
+  site: "https://canberramaker.space",
   integrations: [mdx(), svelte(), solidJs()],
   markdown: {
     shikiConfig: {
