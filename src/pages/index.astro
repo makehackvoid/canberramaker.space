@@ -183,17 +183,18 @@ const permalink = new URL('/', Astro.site ?? Astro.url.origin).href;
     align-items: center;
     display: grid;
     gap: 2ch;
-    grid-template-columns: clamp(8rem, 20vw, 15rem) minmax(0, 1fr);
+    grid-template-columns: clamp(6.4rem, 16vw, 12rem) minmax(0, 1fr);
   }
 
   .supporter img {
     grid-column: 1;
     grid-row: 1;
-    max-height: 5rem;
+    max-height: 4rem;
     max-width: 100%;
   }
 
   .supporter .copy {
+    font-size: 0.8em;
     grid-column: 2;
     grid-row: 1;
   }
