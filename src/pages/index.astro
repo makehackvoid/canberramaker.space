@@ -108,7 +108,13 @@ const permalink = new URL('/', Astro.site ?? Astro.url.origin).href;
           </section>
         </div>
         <div class="main">
-          <video controls autoplay muted loop>
+          <video
+            controls
+            autoplay
+            muted
+            loop
+            poster="/assets/videos/makehackvoid-poster.jpg"
+          >
             <source
               src="/assets/videos/makehackvoid.mp4"
               type="video/mp4">
