@@ -1,15 +1,18 @@
-<img class="logo" src="/assets/logos/hexamgong.svg" alt="" />
+<img class="logo light" src="/assets/logos/hexamgong.svg" alt="" />
+<img class="logo dark" src="/assets/logos/hexamgong-white.svg" alt="" />
 
 <style>
   .logo {
-    display: block;
+    flex-shrink: 0;
     height: 3rem;
     width: auto;
   }
 
-  @media (prefers-color-scheme: dark) {
-    .logo {
-      filter: invert(1);
-    }
+  .light {
+    display: var(--light-theme-display);
+  }
+
+  .dark {
+    display: var(--dark-theme-display);
   }
 </style>

@@ -1,4 +1,7 @@
 :root {
+  color-scheme: light;
+  --light-theme-display: block;
+  --dark-theme-display: none;
   --background-body: #fff;
   --text-main: #36393b;
   --text-secondary: #6b6f72;
@@ -17,12 +20,24 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --light-theme-display: none;
+    --dark-theme-display: block;
     --background-body: #202122;
     --text-main: #fff;
     --text-secondary: #ccc;
     --primary-color: #548e9b;
   }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background-body: #202122;
+  --text-main: #fff;
+  --text-secondary: #ccc;
+  --light-theme-display: none;
+  --dark-theme-display: block;
 }
 
 @media (max-width: 800px) {

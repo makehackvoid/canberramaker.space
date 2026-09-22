@@ -4,6 +4,7 @@ import Logo from './Logo.astro'
 
 <style>
   .brand {
+    min-width: 0;
     display: flex;
     align-items: center;
     gap: 2ch;
@@ -26,6 +27,20 @@ import Logo from './Logo.astro'
     font-family: var(--font-family-mhv);
     font-size: 1em;
     font-weight: 350;
+  }
+
+  @media (max-width: 520px) {
+    .brand {
+      gap: 0.6rem;
+    }
+
+    h1 {
+      font-size: clamp(1.1rem, 4.5vw, 1.5rem);
+    }
+
+    .byline {
+      font-size: 0.75rem;
+    }
   }
 </style>
 

@@ -15,6 +15,18 @@ const { title, description, permalink } = Astro.props
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
+<script is:inline>
+  (() => {
+    let theme;
+    try {
+      theme = localStorage.getItem('theme');
+    } catch {}
+    document.documentElement.dataset.theme =
+      theme === 'light' || theme === 'dark'
+        ? theme
+        : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  })();
+</script>
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
