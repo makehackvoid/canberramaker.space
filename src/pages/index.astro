@@ -1,8 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-import Map from '../components/Map';
-
 const title = 'Canberra Makerspace';
 const description = 'Canberra\'s community makerspace.';
 const permalink = Astro.site.href;
@@ -13,112 +11,64 @@ const permalink = Astro.site.href;
     <div class="home-copy">
       <section class="banner">
         <div class="blurb">
-          <h1><span class="emoji">👋</span>hi!</h1>
+          <h1>welcome!</h1>
           <p>
-            Welcome to Canberra Makerspace!
-          </p>
-          <p>
-            We're a community-driven workshop for people from
+            Canberra Makerspace is a community-driven workshop for people from
             all walks of life to meet and collaborate. We provide a space for
             makers and aspiring makers to bring their ideas to life with access to
             <a href="https://github.com/makehackvoid/docs/wiki/2D-and-3D-Tools">tools</a>, 
             resources, and a supportive community.
           </p>
           <p>
-            Find out <a href="#whats_on">what's on</a>, learn more about 
-            <a href="/thespace">the space</a>, where to 
-            <a href="#location">visit us</a> and how to 
-            <a href="/membership">get involved.</a>
+            Anyone is welcome to visit and hang out for free at our space.
+            If you'd like to use our tools, you can
+            <a
+              href="https://square.link/u/XX0WC6Q6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >become a member</a> with a monthly payment of
+            your choosing ($50 recommended). Membership fees help pay our rent
+            and bills.
           </p>
-          </div>
+          <p>
+            Visit us at
+            <a href="https://maps.app.goo.gl/tDpBBhgvBFtPK6eVA">
+              17 Tucana Street, Giralang
+            </a>.
+          </p>
+
+          <section class="opening-hours">
+            <h1>opening hours</h1>
+            <p><strong>Wednesdays:</strong> 6:30pm–9pm</p>
+            <p><strong>Sundays:</strong> 1pm–4pm</p>
+          </section>
+
+          <section class="what-we-do">
+            <a class="anchor" id="what_we_do"></a>
+            <h1>what we do</h1>
+            <ul>
+              <li>Electronics hacking</li>
+              <li>3D printing</li>
+              <li>Industrial design</li>
+              <li>Arduino & Raspberry Pi</li>
+              <li>Linux</li>
+              <li>Sewing</li>
+              <li>Sculpting</li>
+              <li>Jewellery</li>
+              <li>Metal casting</li>
+              <li>Wood turning</li>
+              <li>Working on cars & bikes</li>
+              <li>8-bit computing</li>
+              <li>Almost anything you want!</li>
+            </ul>
+          </section>
+        </div>
         <div class="main">
           <video controls autoplay muted loop>
             <source 
               src="/assets/videos/banner-extended2.mp4" 
               type="video/mp4">
           </video>
-        </div>
-      </section>
-      <section class="blurb">
-      </section>
-
-
-      <section class="calendar">
-        <div class="copy">
-          <a class="anchor" id="whats_on"></a>
-          <h1><span class="emoji">🗓️</span>what's on</h1>
-          <h2>Electronics Wednesday</h2>
-          <p>
-            Every Wednesday from 6:30pm to 9pm-ish
-          </p>
-          <p>
-          Activities:
-          </p>
-          <ul>
-            <li>Electronics hacking</li>
-            <li>Arduino</li>
-            <li>Raspberry Pi</li>
-            <li>3D printing</li>
-            <li>Linux</li>
-            <li>8-bit computing</li>
-          </ul>
-          <h2>Maker Sunday</h2>
-          <p>
-            Every Sunday from 1pm to 4pm-ish
-          </p>
-          <p>
-          Activities:
-          </p>
-          <ul>
-            <li>Woodwork</li>
-            <li>Metalwork</li>
-            <li>Working on cars & vans</li>
-            <li>General making</li>
-          </ul>
-        </div>
-        <div class="calendar-pane">
-          <object 
-            data="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Australia%2FSydney&showPrint=0&mode=AGENDA&showNav=0&showTabs=0&showCalendars=0&showDate=0&src=Y2FuYmVycmFtYWtlcnNwYWNlQGdtYWlsLmNvbQ&color=%233f51b5" 
-            style="border: 0;" 
-            width="100%" 
-            height="100%" 
-            frameborder="0" 
-            scrolling="no">
-          </object>
-        </div>
-      </section>
-
-      <section class="location">
-        <div class="copy">
-          <a class="anchor" id="location"></a>
-          <h1><span class="emoji">🌏</span>Where to find us</h1>
-          <h2>The space's address:</h2>
-          <address>
-            17 Tucana Street <br />
-            Giralang ACT 2617 <br />
-            Canberra
-          </address>
-         
-          <ul>
-            <li>
-          <a href="https://osm.org/go/uNlUbAhob">
-            OpenStreetMap
-          </a>
-            </li>
-          <li>
-            <a href="https://what3words.com/ticked.sharpen.nervous">
-              ///ticked.sharpen.nervous
-            </a>
-            </li>
-            <li>
-          <a href="https://maps.app.goo.gl/tDpBBhgvBFtPK6eVA">
-            Google maps
-          </a>
-            </li>
-          </ul>
-        </div>
-        <div class="map-container">
-          <Map client:load />
         </div>
       </section>
 
@@ -137,9 +87,14 @@ const permalink = Astro.site.href;
   }
 
   video {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .banner .main {
+    margin-right: calc(-1 * var(--page-gutter));
   }
 
   .home-copy {
@@ -148,57 +103,55 @@ const permalink = Astro.site.href;
   }
 
   .home-copy h1 {
-    font-weight: 700;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 500;
     margin: 0.5em 0;
     line-height: 1.3;
   }
-  
-  .emoji {
-    margin-right: 0.5ch;
+
+  .banner .blurb {
+    padding-top: clamp(1.5rem, 4vw, 3rem);
   }
-  
-  section:not(:last-child) {
-    // margin: 2em 0;
-    border-bottom: 1px dashed grey;
+
+  .opening-hours p {
+    margin: 0.4em 0;
+  }
+
+  .blurb > section {
+    margin-top: clamp(2rem, 4vw, 3rem);
   }
 
   section.banner {
-    height: 70vh;
-  }
-  
-  section.location, section.calendar, section.banner {
-    gap: 2ch;
     display: grid;
-    grid-template-rows: 100%;
+    gap: 2ch;
     grid-template-columns: 2fr minmax(0, 3fr);
+    min-height: 70vh;
   }
 
   @media (max-width: 800px) {
-    section.location, section.calendar, section.banner {
+    section.banner {
       grid-template-columns: 1fr 1fr;
     }
   }
   @media (max-width: 650px) {
-    section.location, section.calendar, section.banner {
+    section.banner {
       grid-template-columns: 1fr;
-      border-bottom: none;
     }
 
     section.banner {
       height: auto;
       grid-template-rows: auto 70vh;
     }
-    
-    section.location, section.calendar {
-      grid-template-rows: auto 50vh;
-    }
 
-    section.banner video, 
-    section.calendar .calendar-pane,
-    section.location .map-container {
+    section.banner video {
       width: calc(100% + 4ch);
       margin-left: -2ch;
     }
+
+    .banner .main {
+      margin-right: 0;
+    }
+
   }
 
   p~ul {
@@ -207,17 +160,6 @@ const permalink = Astro.site.href;
 
   p:has(+ ul) {
     margin-bottom: 0.5em;
-  }
-
-  .calendar-pane {
-    pointer-events: none;
-  }
-
-  .map-container {
-    position: relative;
-    width: auto;
-    // border-radius: 15px;
-    overflow: hidden;
   }
 
 </style>

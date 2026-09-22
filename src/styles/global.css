@@ -6,8 +6,8 @@
 
   --font-family-sans: "Inter", sans-serif;
   --font-family-monospace: "JetBrains Mono", sans-serif;
-  --font-family-brand: "Averia Sans Libre Bold", sans-serif;
-  --font-family-brand-light: "Averia Sans Libre Light", sans-serif;
+  --font-family-brand: "Stack Sans Headline", sans-serif;
+  --font-family-brand-light: "Stack Sans Headline", sans-serif;
   --font-family-mhv: "JetBrains Mono", sans-serif;
 
   --header-height: 4.5rem;
@@ -111,6 +111,10 @@ ol {
 ol,
 ul {
   padding-left: 2ch;
+}
+
+ul {
+  list-style-type: "›  ";
 }
 
 li {
