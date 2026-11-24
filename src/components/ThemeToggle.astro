@@ -11,6 +11,8 @@
 </button>
 
 <script>
+  import type { TransitionBeforeSwapEvent } from 'astro:transitions/client';
+
   const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
   let preference: string | null = null;
   try {
@@ -47,7 +49,7 @@
   });
 
   document.addEventListener('astro:before-swap', (event) => {
-    event.newDocument.documentElement.dataset.theme = document.documentElement.dataset.theme;
+    (event as TransitionBeforeSwapEvent).newDocument.documentElement.dataset.theme = document.documentElement.dataset.theme;
   });
   document.addEventListener('astro:page-load', updateButton);
   updateButton();
