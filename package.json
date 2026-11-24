@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
-    "@astrojs/mdx": "^2.0.0",
+    "@astrojs/mdx": "^8.1.6",
     "@astrojs/solid-js": "^4.4.0",
-    "@astrojs/svelte": "^5.0.0",
-    "astro": "^4.0.1",
+    "@astrojs/svelte": "^9.1.6",
+    "astro": "^7.4.13",
     "powerglitch": "^2.3.3",
     "reading-time": "^1.5.0",
     "rehype-external-links": "^3.0.0",
